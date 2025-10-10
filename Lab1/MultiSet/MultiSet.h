@@ -3,9 +3,9 @@
  * @file Multisets.h
  * @brief Заголовочный файл для работы с мультимножествами
  * @mainpage Система управления мультимножествами
- * 
+ *
  * Данная система предоставляет классы для работы с мультимножествами,
- * включая операции объединения, пересечения, разности и булевы операции.
+ * включая операции объединения, пересечения, разности и булеан.
  */
 
 #ifndef MULTISETS_H
@@ -16,12 +16,12 @@
 #include <cstring>
 #include <cctype>
 
-/**
- * @class MultiSetElement
- * @brief Класс, представляющий элемент мультимножества
- * 
- * Хранит значение элемента, количество вхождений и флаг принадлежности к множеству
- */
+ /**
+  * @class MultiSetElement
+  * @brief Класс, представляющий элемент мультимножества
+  *
+  * Хранит значение элемента, количество вхождений и флаг принадлежности к множеству
+  */
 class MultiSetElement {
 private:
     char* value;    ///< Значение элемента
@@ -42,12 +42,12 @@ public:
      * @param other Элемент для копирования
      */
     MultiSetElement(const MultiSetElement& other);
-    
+
     /**
      * @brief Деструктор
      */
     ~MultiSetElement();
-    
+
     /**
      * @brief Оператор присваивания
      * @param other Элемент для присваивания
@@ -84,7 +84,7 @@ public:
 /**
  * @class UndirectedMultiSet
  * @brief Класс, представляющий неориентированное мультимножество
- * 
+ *
  * Поддерживает операции над мультимножествами и обычными множествами
  */
 class UndirectedMultiSet {
@@ -114,7 +114,7 @@ private:
      * @param isSet Флаг типа элемента
      */
     void addElement(const char* value, int count, bool isSet);
-    
+
     /**
      * @brief Удалить элемент
      * @param value Значение элемента
@@ -134,7 +134,7 @@ public:
      * @brief Конструктор по умолчанию
      */
     UndirectedMultiSet();
-    
+
     /**
      * @brief Конструктор из строки
      * @param str Строковое представление множества
@@ -146,7 +146,7 @@ public:
      * @param other Мультимножество для копирования
      */
     UndirectedMultiSet(const UndirectedMultiSet& other);
-    
+
     /**
      * @brief Деструктор
      */
@@ -158,7 +158,7 @@ public:
      * @return Ссылка на текущий объект
      */
     UndirectedMultiSet& operator=(const UndirectedMultiSet& other);
-    
+
     /**
      * @brief Добавить элемент в мультимножество
      * @param value Значение элемента
@@ -189,13 +189,13 @@ public:
      * @return true если элемент найден, false в противном случае
      */
     bool operator[](const char* value) const;
-    
+
     /**
      * @brief Получить мощность множества (количество уникальных элементов)
      * @return Мощность множества
      */
     int power() const;
-    
+
     /**
      * @brief Получить количество уникальных элементов
      * @return Количество уникальных элементов
@@ -207,7 +207,7 @@ public:
      * @return Общее количество элементов
      */
     int totalCount() const;
-    
+
     /**
      * @brief Получить количество вхождений элемента
      * @param value Значение элемента
@@ -215,7 +215,7 @@ public:
      * @return Количество вхождений элемента
      */
     int getCount(const char* value, bool isSet) const;
-    
+
     /**
      * @brief Проверить, пусто ли мультимножество
      * @return true если мультимножество пусто, false в противном случае
@@ -232,7 +232,7 @@ public:
 
     /// @name Операции над мультимножествами
     /// @{
-    
+
     /**
      * @brief Объединение мультимножеств
      * @param other Мультимножество для объединения
@@ -287,7 +287,7 @@ public:
      * @return Строковое представление мультимножества
      */
     char* toString() const;
-    
+
     /**
      * @brief Вывести мультимножество на экран
      */
@@ -296,8 +296,8 @@ public:
 
 /**
  * @class SetManager
- * @brief Менеджер для управления коллекцией мультимножеств
- * 
+ * @brief Менеджер для управления мультимножествами
+ *
  * Позволяет хранить несколько мультимножеств с именами и выполнять операции над ними
  */
 class SetManager {
@@ -318,7 +318,7 @@ public:
      * @brief Конструктор по умолчанию
      */
     SetManager();
-    
+
     /**
      * @brief Деструктор
      */
@@ -336,7 +336,7 @@ public:
      * @param set Мультимножество для добавления
      */
     void addSetAutoName(const UndirectedMultiSet& set);
-    
+
     /**
      * @brief Получить количество мультимножеств
      * @return Количество мультимножеств
@@ -356,7 +356,7 @@ public:
      * @return Константная ссылка на мультимножество
      */
     const UndirectedMultiSet& getSet(int index) const;
-    
+
     /**
      * @brief Вывести список всех мультимножеств
      */
