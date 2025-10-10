@@ -85,14 +85,14 @@ void Author::set_books(int bw) {
 NumberOfTranslations::NumberOfTranslations(int tran, const Language& language)
     : number_translations(tran), associatedLanguage(language) {
 }
-NumberOfTranslations::NumberOfTranslations() : number_translations(80), associatedLanguage(Language("English")) {}
+NumberOfTranslations::NumberOfTranslations() : number_translations(1), associatedLanguage(Language("English")) {}
 int NumberOfTranslations::get_number_translations() { return number_translations; }
 string NumberOfTranslations::get_AssociatedLanguage() { return associatedLanguage.get_language(); }
  
 Translator::Translator(const string& tr, const NumberOfTranslations& translations)
     : translator(tr), associatedTranslations(translations) {
 }
-Translator::Translator() : translator(""), associatedTranslations(NumberOfTranslations(80, Language("English"))) {}
+Translator::Translator() : translator(""), associatedTranslations(NumberOfTranslations(1, Language("Russian"))) {}
 string Translator::get_translator() { return translator; }
 int Translator::get_AssociatedTranslations() { return associatedTranslations.get_number_translations(); }
  
@@ -299,7 +299,7 @@ string Reviews::get_reviews() { return reviews; }
 NumberOfReviews::NumberOfReviews(int nr, const Reviews& reviews)
     : number_reviews(nr), associatedReviews(reviews) {
 }
-NumberOfReviews::NumberOfReviews() : number_reviews(1000000), associatedReviews(Reviews("Отличная книга о магии и приключениях!")) {}
+NumberOfReviews::NumberOfReviews() : number_reviews(1000), associatedReviews(Reviews("Отличная книга о магии и приключениях!")) {}
 int NumberOfReviews::get_number_reviews() { return number_reviews; }
 string NumberOfReviews::get_AssociatedReviews() { return associatedReviews.get_reviews(); }
 
@@ -536,4 +536,5 @@ int Book::get_AssociatedCharacterVolumeCount() { return MainCharacter::get_Assoc
 string Book::get_AssociatedSupplierBookCondition() { return Supplier::get_AssociatedBookCondition(); }
 string Book::get_AssociatedNotificationArrivalDate() { return BookArrivalNotification::get_AssociatedArrivalDate(); }
 int Book::get_AssociatedExperience() { return AssistantName::get_AssociatedExperience(); }
+
 '''
