@@ -1,4 +1,4 @@
-'''cpp
+
   /**
  * @file NumberOfTranslations.h
  * @brief Класс для работы с количеством переводов книги
@@ -45,4 +45,4 @@ public:
 };
 
 #endif
-  '''
+
