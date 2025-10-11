@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file WorkExperience.h
  * @brief Класс для работы с опытом работы
@@ -40,4 +40,3 @@ public:
 };
 
 #endif
-'''
