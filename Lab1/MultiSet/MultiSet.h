@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file Multisets.h
  * @brief Заголовочный файл для работы с мультимножествами
@@ -377,4 +377,4 @@ public:
 char* trim(char* str);
 
 #endif
-'''
+
