@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookTitle.h
  * @brief Класс для работы с названием книги
@@ -47,4 +47,4 @@ public:
 
 #endif
 
-'''
+
