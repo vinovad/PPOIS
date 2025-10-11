@@ -1,4 +1,4 @@
-'''cpp
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "Set.h"
 
@@ -677,4 +677,3 @@ void SetManager::convertToCantorSet() {
     }
 }
 
-'''
