@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file NumberOfReviews.h
  * @brief Класс для работы с количеством отзывов
@@ -47,4 +47,3 @@ public:
 };
 
 #endif
-'''
