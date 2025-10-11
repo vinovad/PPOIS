@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file HollLocation.h
  * @brief Класс для работы с расположением в зале
@@ -45,4 +45,3 @@ public:
 };
 
 #endif
-'''
