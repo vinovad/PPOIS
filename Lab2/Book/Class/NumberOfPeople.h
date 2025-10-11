@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file NumberOfPeople.h
  * @brief Класс для работы с количеством людей
@@ -51,4 +51,3 @@ public:
 };
 
 #endif
-'''
