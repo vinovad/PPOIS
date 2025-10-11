@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file LoyaltyProgram.h
  * @brief Класс для работы с программой лояльности
@@ -75,4 +75,4 @@ public:
 };
 
 #endif
-'''
+
