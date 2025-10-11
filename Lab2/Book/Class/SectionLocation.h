@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file SectionLocation.h
  * @brief Класс для работы с расположением в секции
@@ -53,4 +53,3 @@ public:
 };
 
 #endif
-'''
