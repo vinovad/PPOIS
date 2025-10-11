@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookArrivalNotification.h
  * @brief Класс для работы с уведомлениями о поступлении книг
@@ -67,4 +67,4 @@ public:
 };
 
 #endif
-'''
+
