@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookFormat.h
  * @brief Класс для работы с форматом книги
@@ -47,4 +47,3 @@ public:
 };
 
 #endif
-'''
