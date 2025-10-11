@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file PersonalOpinion.h
  * @brief Класс для работы с личными мнениями о книгах
@@ -49,4 +49,3 @@ public:
 };
 
 #endif
-'''
