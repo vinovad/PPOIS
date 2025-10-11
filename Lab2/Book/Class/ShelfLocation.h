@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file ShelfLocation.h
  * @brief Класс для работы с расположением на полке
@@ -47,4 +47,4 @@ public:
 };
 
 #endif
-'''
+
