@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file NumberOfBooks.h
  * @brief Класс для работы с количеством книг
@@ -35,4 +35,4 @@ public:
 };
 
 #endif
-'''
+
