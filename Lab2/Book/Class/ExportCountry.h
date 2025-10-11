@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file ExportCountry.h
  * @brief Класс для работы со страной экспорта книги
@@ -53,4 +53,3 @@ public:
 };
 
 #endif
-'''
