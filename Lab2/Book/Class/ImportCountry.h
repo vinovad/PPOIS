@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file ImportCountry.h
  * @brief Класс для работы со страной импорта книги
@@ -53,4 +53,4 @@ public:
 };
 
 #endif
-'''
+
