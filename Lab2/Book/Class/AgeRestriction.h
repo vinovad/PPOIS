@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file AgeRestriction.h
  * @brief Класс для работы с возрастными ограничениями
@@ -72,4 +72,3 @@ public:
 };
 
 #endif
-'''
