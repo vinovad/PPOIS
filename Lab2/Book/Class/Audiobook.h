@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file Audiobook.h
  * @brief Класс для работы с аудиокнигами
@@ -35,4 +35,4 @@ public:
 };
 
 #endif
-'''
+
