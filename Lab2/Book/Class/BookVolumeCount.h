@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookVolumeCount.h
  * @brief Класс для работы с количеством томов в серии
@@ -45,4 +45,4 @@ public:
 };
 
 #endif
-'''
+
