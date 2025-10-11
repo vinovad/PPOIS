@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file TargetAudience.h
  * @brief Класс для работы с целевой аудиторией
@@ -47,4 +47,4 @@ public:
 };
 
 #endif
-'''
+
