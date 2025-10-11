@@ -1,4 +1,4 @@
-'''cpp
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "MultiSet.h"
 
@@ -534,4 +534,4 @@ char* trim(char* str) {
 
     return str;
 }
-'''
+
