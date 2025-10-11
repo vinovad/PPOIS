@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file PositionLocation.h
  * @brief Класс для работы с позицией на полке
@@ -35,4 +35,3 @@ public:
 };
 
 #endif
-'''
