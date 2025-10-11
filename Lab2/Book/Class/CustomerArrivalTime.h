@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file CustomerArrivalTime.h
  * @brief Класс для работы с временем прибытия клиентов
@@ -58,4 +58,3 @@ public:
 };
 
 #endif
-'''
