@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookWeight.h
  * @brief Класс для работы с весом книги
@@ -47,4 +47,3 @@ public:
 };
 
 #endif
-'''
