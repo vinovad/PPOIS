@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookSeries.h
  * @brief Класс для работы с сериями книг
@@ -39,4 +39,4 @@ public:
 };
 
 #endif
-'''
+
