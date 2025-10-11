@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file EducationLevel.h
  * @brief Класс для работы с уровнями образования
@@ -38,4 +38,4 @@ public:
 };
 
 #endif
-'''
+
