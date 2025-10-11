@@ -1,4 +1,4 @@
-'''cpp
+
 /**
  * @file BookCondition.h
  * @brief Класс для работы с состоянием книги
@@ -40,4 +40,4 @@ public:
 };
 
 #endif
-'''
+
