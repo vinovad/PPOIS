@@ -1,4 +1,4 @@
-''cpp
+
 
   /**
  * @file YearOfManufacture.h
@@ -51,4 +51,4 @@ public:
 };
 
 #endif
-  '''
+
