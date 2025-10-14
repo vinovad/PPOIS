@@ -1,14 +1,15 @@
-'''cpp
 #include "Book.h"
 #include <iostream>
+#include "Exception.h"
 using namespace std;
 
 Tag::Tag(const string& t) : book_tag(t) {}
 Tag::Tag() : book_tag("Magic") {}
 string Tag::get_Tag() { return book_tag; }
+
 void Tag::set_Tag(string tg) {
     if (tg != "Magic") {
-        throw Exception("Данная книга не содержит данного тега");
+        throw TagException("Данная книга не содержит данного тега");
     }
     else {
         cout << " Хорошего чтения!" << endl;
@@ -20,9 +21,10 @@ Genre::Genre(const string& g, const Tag& tag) : genre(g), associatedTag(tag) {}
 Genre::Genre() : genre("Fantasy"), associatedTag(Tag("Magic")) {}
 string Genre::get_Genre() { return genre; }
 string Genre::get_AssociatedTag() { return associatedTag.get_Tag(); }
+
 void Genre::set_Genre(string gen) {
     if (gen != "Fantasy") {
-        throw Exception("Данная книга не относится к этому жанру");
+        throw GenreException("Данная книга не относится к этому жанру");
     }
     else {
         cout << "Книга Harry Potter относится к жанру Фэнтези. Хорошего чтения!" << endl;
@@ -33,9 +35,10 @@ YearOfManufacture::YearOfManufacture(int y) : year(y) {}
 YearOfManufacture::YearOfManufacture() : year(1997) {}
 int YearOfManufacture::get_Year() { return year; }
 void YearOfManufacture::set_Year(int y) { year = y; }
+
 void YearOfManufacture::set_Year(string g) {
     if (g != "90e") {
-        throw Exception("Данная книга не относится к этому времени");
+        throw YearException("Данная книга не относится к этому времени");
     }
     else {
         cout << "Данная книга 1997 года. Хорошего чтения!" << endl;
@@ -49,11 +52,14 @@ string Country::get_country() { return country; }
 Language::Language(const string& l) : language(l) {}
 Language::Language() : language("English") {}
 string Language::get_language() { return language; }
+
 void Language::set_language(string l) {
     if (l != "English") {
-        throw Exception("Данной книги в таком переводе нет");
+        throw LanguageException("Данной книги в таком переводе нет");
     }
-    else { cout << "Хорошего чтения!" << endl; }
+    else {
+        cout << "Хорошего чтения!" << endl;
+    }
     language = l;
 }
  
@@ -68,17 +74,23 @@ string Author::get_birth() { return birth_year; }
 int Author::get_books() { return books_written; }
 string Author::get_AssociatedCountry() { return associatedCountry.get_country(); }
 string Author::get_AssociatedLanguage() { return associatedLanguage.get_language(); }
+
 void Author::set_birth(int by) {
     if (by != 1965) {
-        throw Exception("Не угадали, почитайте биографию");
+        throw AuthorBirthException("Не угадали, почитайте биографию");
     }
-    else { cout << "Угадали!" << endl; }
+    else {
+        cout << "Угадали!" << endl;
+    }
 }
+
 void Author::set_books(int bw) {
     if (bw != 15) {
-        throw Exception("Не угадали, почитайте биографию");
+        throw AuthorBooksException("Не угадали, почитайте биографию");
     }
-    else { cout << "Угадали!" << endl; }
+    else {
+        cout << "Угадали!" << endl;
+    }
     books_written = bw;
 }
  
@@ -106,24 +118,31 @@ string Prohibited::get_AssociatedCountry() { return associatedCountry.get_countr
 Rating::Rating(double r) : rating(r) {}
 Rating::Rating() : rating(4.8) {}
 double Rating::get_rating() { return rating; }
+
 void Rating::set_rating(double r) {
     if (r <= 4.7 || r > 5.0) {
-        throw Exception("Данная книга не подходит по желаемому рейтингу");
+        throw RatingException("Данная книга не подходит по желаемому рейтингу");
     }
-    else { cout << "Хорошего чтения!" << endl; }
+    else {
+        cout << "Хорошего чтения!" << endl;
+    }
     rating = r;
 }
  
 Publisher::Publisher(const string& p) : publisher(p) {}
 Publisher::Publisher() : publisher("Bloomsbury") {}
 string Publisher::get_publisher() { return publisher; }
+
 void Publisher::set_publisher(string p) {
     if (p != "Bloomsbury") {
-        throw Exception("Данная книга выпущена другим издательством");
+        throw PublisherException("Данная книга выпущена другим издательством");
     }
-    else { cout << " Хорошего чтения!" << endl; }
+    else {
+        cout << " Хорошего чтения!" << endl;
+    }
     publisher = p;
 }
+
  
 ImportCountry::ImportCountry(const string& country, const Prohibited& prohibited)
     : import_country(country), associatedProhibited(prohibited) {
@@ -144,14 +163,17 @@ string ExportCountry::get_AssociatedProhibitedCountry() { return associatedProhi
 PageCount::PageCount(int pages) : number_pages(pages) {}
 PageCount::PageCount() : number_pages(400) {}
 int PageCount::get_number_pages() { return number_pages; }
+
 void PageCount::set_number_pages(int n) {
     if (n < 362) {
-        throw Exception("Количество страниц в данной книге больше, чем вы ожидали");
+        throw PageCountException("Количество страниц в данной книге больше, чем вы ожидали");
     }
-    else { cout << "Хорошего чтения!" << endl; }
+    else {
+        cout << "Хорошего чтения!" << endl;
+    }
     number_pages = n;
 }
- 
+
 BookFormat::BookFormat(const string& bf, const PageCount& pageCount)
     : bookformat(bf), associatedPageCount(pageCount) {
 }
@@ -167,14 +189,16 @@ string BookWeight::get_AssociatedFormat() { return associatedFormat.get_bookform
 BookTitle::BookTitle(const string& title) : title_book(title) {}
 BookTitle::BookTitle() : title_book("Harry Potter") {}
 string BookTitle::get_Book() { return title_book; }
+
 void BookTitle::set_Book(string tb) {
     if (tb != "Harry Potter") {
-        throw Exception("Название не соответствует введенному, заявка отклонена");
+        throw BookTitleException("Название не соответствует введенному, заявка отклонена");
     }
-    else { cout << " Хорошего чтения!" << endl; }
+    else {
+        cout << " Хорошего чтения!" << endl;
+    }
     title_book = tb;
 }
-
 
 Sale::Sale(double discount, const string& period)
     : discount_percentage(discount), sale_period(period) {
@@ -321,11 +345,14 @@ string AgeRestriction::get_AssociatedAudience() { return associatedAudience.get_
 string AgeRestriction::get_AssociatedAudienceEducation() { return associatedAudience.get_AssociatedEducationLevel(); }
 string AgeRestriction::get_AssociatedUserName() { return associatedUser.get_name(); }
 int AgeRestriction::get_AssociatedUserBooks() { return associatedUser.get_books_bought(); }
+
 void AgeRestriction::set_age_restriction(int v) {
     if (v < 12) {
-        throw Exception("Данная книга ограничена для вашего возраста");
+        throw AgeRestrictionException("Данная книга ограничена для вашего возраста");
     }
-    else { cout << "Хорошего чтения!" << endl; }
+    else {
+        cout << "Хорошего чтения!" << endl;
+    }
     age_restriction = v;
 }
 
@@ -418,11 +445,14 @@ Cover_Format::Cover_Format(const string& f, const Publisher& publisher) : format
 Cover_Format::Cover_Format() : format("Hard"), associatedPublisher(Publisher("Bloomsbury")) {}
 string Cover_Format::get_format() { return format; }
 string Cover_Format::get_AssociatedPublisher() { return associatedPublisher.get_publisher(); }
+
 void Cover_Format::set_format(string f) {
     if (f != "Hard") {
-        throw Exception("Данная книга есть только в Твердой обложке");
+        throw CoverFormatException("Данная книга есть только в Твердой обложке");
     }
-    else { cout << " Хорошего чтения!" << endl; }
+    else {
+        cout << " Хорошего чтения!" << endl;
+    }
     format = f;
 }
 
@@ -536,5 +566,3 @@ int Book::get_AssociatedCharacterVolumeCount() { return MainCharacter::get_Assoc
 string Book::get_AssociatedSupplierBookCondition() { return Supplier::get_AssociatedBookCondition(); }
 string Book::get_AssociatedNotificationArrivalDate() { return BookArrivalNotification::get_AssociatedArrivalDate(); }
 int Book::get_AssociatedExperience() { return AssistantName::get_AssociatedExperience(); }
-
-'''
