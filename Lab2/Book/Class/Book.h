@@ -1,9 +1,8 @@
-
-  /**
+/**
  * @file Book.h
  * @brief Главный заголовочный файл для системы управления книгами
  * @mainpage Система управления cкладом книг
- * 
+ *
  * Данная система предоставляет комплексное решение для управления информацией о книгах,
  * включая их характеристики, авторов, издателей, цены, рейтинги и многое другое.
  */
@@ -61,13 +60,13 @@
 #include "WorkExperience.h"
 #include "AssistantName.h"
 
-/**
- * @class Book
- * @brief Основной класс, представляющий книгу в системе
- * 
- * Класс Book наследует функциональность от всех основных классов системы,
- * предоставляя полный набор характеристик для описания книги.
- */
+ /**
+  * @class Book
+  * @brief Основной класс, представляющий книгу в системе
+  *
+  * Класс Book наследует функциональность от всех основных классов системы,
+  * предоставляя полный набор характеристик для описания книги.
+  */
 class Book : public Genre, public YearOfManufacture, public MainCharacter, public Country,
     public Author, public Rating, public Cover_Format, public Publisher, public Tag,
     public Language, public BookFormat, public Translator, public NumberOfTranslations,
@@ -148,7 +147,7 @@ public:
         string export_country, string audience, string education_lvl, bool limited_status,
         bool has_pdf, bool has_audio, int reviews_count, string review_text, string opinion,
         int people_count, string user_name, string purchased_title, string purchase_date,
-        double purchase_price, string purchased_user, string notification_title, 
+        double purchase_price, string purchased_user, string notification_title,
         const User loyalty_user, string assistantname, int experience);
 
     /// @name Методы доступа к ассоциированным данным
@@ -172,4 +171,3 @@ public:
 };
 
 #endif
-  
