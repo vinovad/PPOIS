@@ -1,5 +1,5 @@
-
 #include "Book.h"
+#include "Exception.h" 
 #include <iostream>
 #include <string>
 using namespace std;
@@ -92,38 +92,37 @@ int main() {
         getline(cin, genre);
         HarryPotter.set_Genre(genre);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const GenreException& ex) {
+        cout << "Ошибка жанра: " << ex.what() << endl;
     }
 
     try {
         string naz;
-        cout << "Подтвердите покупку книги , указав ее название (Harry Potter): ";
+        cout << "Подтвердите покупку книги, указав ее название (Harry Potter): ";
         getline(cin, naz);
         HarryPotter.set_Book(naz);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const BookTitleException& ex) { 
+        cout << "Ошибка названия: " << ex.what() << endl;
     }
 
     try {
         string tag;
-        cout << "Введите желаемый тэг для данной книги(Magic): ";
+        cout << "Введите желаемый тэг для данной книги (Magic): ";
         getline(cin, tag);
         HarryPotter.set_Tag(tag);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const TagException& ex) { 
+        cout << "Ошибка тега: " << ex.what() << endl;
     }
-
     try {
         string obl;
-        cout << "В какой обложке вы бы хотели приобрести книгу(Soft/Hard)?: ";
+        cout << "В какой обложке вы бы хотели приобрести книгу (Soft/Hard)?: ";
         getline(cin, obl);
         HarryPotter.set_format(obl);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const CoverFormatException& ex) {  
+        cout << "Ошибка формата: " << ex.what() << endl;
     }
 
     try {
@@ -132,48 +131,48 @@ int main() {
         cin >> v;
         HarryPotter.set_age_restriction(v);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const AgeRestrictionException& ex) {  
+        cout << "Ошибка возраста: " << ex.what() << endl;
     }
 
     try {
         double r;
-        cout << "Введите желаемый рейтинг:";
+        cout << "Введите желаемый рейтинг: ";
         cin >> r;
         HarryPotter.set_rating(r);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const RatingException& ex) { 
+        cout << "Ошибка рейтинга: " << ex.what() << endl;
     }
 
     try {
         int str;
-        cout << " Сколько страниц вы можете осилить? ";
+        cout << "Сколько страниц вы можете осилить? ";
         cin >> str;
         HarryPotter.set_number_pages(str);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const PageCountException& ex) {  
+        cout << "Ошибка страниц: " << ex.what() << endl;
     }
 
     try {
         string izd;
-        cout << "От какого издательства вы бы хотели прочесть данную книгу(например:Barbin, Gosselin,L.C. Page & Co., The Russian Messenger)? ";
+        cout << "От какого издательства вы бы хотели прочесть данную книгу (например: Barbin, Gosselin, L.C. Page & Co., The Russian Messenger)? ";
         cin >> izd;
         HarryPotter.set_publisher(izd);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const PublisherException& ex) { 
+        cout << "Ошибка издательства: " << ex.what() << endl;
     }
 
     try {
         string god;
-        cout << "В каком временном промежутке вы бы хотели прочесть данную книгу(например, 80е)? ";
+        cout << "В каком временном промежутке вы бы хотели прочесть данную книгу (например, 80е)? ";
         cin >> god;
         HarryPotter.set_Year(god);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const YearException& ex) { 
+        cout << "Ошибка года: " << ex.what() << endl;
     }
 
     try {
@@ -182,30 +181,29 @@ int main() {
         cin >> lg;
         HarryPotter.set_language(lg);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const LanguageException& ex) {
+        cout << "Ошибка языка: " << ex.what() << endl;
     }
 
     try {
         int t1;
-        cout << "Как вы думаете, сколько книг написала Джоан Роулинг ? : ";
+        cout << "Как вы думаете, сколько книг написала Джоан Роулинг? : ";
         cin >> t1;
         HarryPotter.set_books(t1);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const AuthorBooksException& ex) {  
+        cout << "Ошибка автора: " << ex.what() << endl;
     }
 
     try {
         int t2;
-        cout << "Как вы думаете, в каком году родилась  Джоан Роулинг?: ";
+        cout << "Как вы думаете, в каком году родилась Джоан Роулинг?: ";
         cin >> t2;
         HarryPotter.set_birth(t2);
     }
-    catch (const Exception& ex) {
-        cout << "Ошибка: " << ex.what() << endl;
+    catch (const AuthorBirthException& ex) { 
+        cout << "Ошибка автора: " << ex.what() << endl;
     }
 
     return 0;
 }
-
