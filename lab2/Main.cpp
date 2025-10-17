@@ -18,202 +18,202 @@ using namespace std;
 
 int main() {
     setlocale(0, "rus");
-    User user("Лучший покупатель");
-    cout << "Создан пользователь: " << user.get_name() << endl;
+    User user("Р›СѓС‡С€РёР№ РїРѕРєСѓРїР°С‚РµР»СЊ");
+    cout << "РЎРѕР·РґР°РЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ: " << user.get_name() << endl;
 
-    Book HarryPotter("Fantasy", 1997, "Harry Potter", "United Kingdom", "Автор : Joanne Rowling", "1965 год", 15, 4.8, "Hard", "Bloomsbury", "Волшебство", "English", "A5", "Марина Литвинова", 1, 400, "Harry Potter", 12, 25.99, "USD", 15.0, "", false, 50, 600.0, "12-10-2025", "new", "Harry Potter", 1, "A", 1, "третья", 15, "Bloomsbury Publishing", "United Kingdom", "United Kingdom", "teenagers", "middle_school", false, true, true, 1000, "Отличная книга о магии и приключениях!", "Рекомендую к прочтению!", 1000, "Гость", "Harry Potter", "12-10-2025", 25.99, "Гость", "Harry Potter", user, "Ivan", 20);
+    Book HarryPotter("Fantasy", 1997, "Harry Potter", "United Kingdom", "РђРІС‚РѕСЂ : Joanne Rowling", "1965 РіРѕРґ", 15, 4.8, "Hard", "Bloomsbury", "Р’РѕР»С€РµР±СЃС‚РІРѕ", "English", "A5", "РњР°СЂРёРЅР° Р›РёС‚РІРёРЅРѕРІР°", 1, 400, "Harry Potter", 12, 25.99, "USD", 15.0, "", false, 50, 600.0, "12-10-2025", "new", "Harry Potter", 1, "A", 1, "С‚СЂРµС‚СЊСЏ", 15, "Bloomsbury Publishing", "United Kingdom", "United Kingdom", "teenagers", "middle_school", false, true, true, 1000, "РћС‚Р»РёС‡РЅР°СЏ РєРЅРёРіР° Рѕ РјР°РіРёРё Рё РїСЂРёРєР»СЋС‡РµРЅРёСЏС…!", "Р РµРєРѕРјРµРЅРґСѓСЋ Рє РїСЂРѕС‡С‚РµРЅРёСЋ!", 1000, "Р“РѕСЃС‚СЊ", "Harry Potter", "12-10-2025", 25.99, "Р“РѕСЃС‚СЊ", "Harry Potter", user, "Ivan", 20);
    
     cout << "\n" << string(40, '=') << endl;
-    cout << "Полная информация о книге 'Garry Potter'" << endl;
+    cout << "РџРѕР»РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РєРЅРёРіРµ 'Garry Potter'" << endl;
     cout << string(40, '=') << endl;
 
-    cout << "\n Основная информация:" << endl;
-    cout << " Название: " << HarryPotter.BookTitle::get_Book() << endl;
+    cout << "\n РћСЃРЅРѕРІРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ:" << endl;
+    cout << " РќР°Р·РІР°РЅРёРµ: " << HarryPotter.BookTitle::get_Book() << endl;
     cout << HarryPotter.Author::get_Author() << endl;
-    cout << " Год выпуска: " << HarryPotter.YearOfManufacture::get_Year() << endl;
-    cout << " Жанр: " << HarryPotter.Genre::get_Genre() << endl;
-    cout << " Тег: " << HarryPotter.get_Tag_Genre() << endl;
-    cout << " Главный герой: " << HarryPotter.MainCharacter::get_character() << endl;
-    cout << " Количество томов в серии: " << HarryPotter.get_AssociatedCharacterVolumeCount() << endl;
+    cout << " Р“РѕРґ РІС‹РїСѓСЃРєР°: " << HarryPotter.YearOfManufacture::get_Year() << endl;
+    cout << " Р–Р°РЅСЂ: " << HarryPotter.Genre::get_Genre() << endl;
+    cout << " РўРµРі: " << HarryPotter.get_Tag_Genre() << endl;
+    cout << " Р“Р»Р°РІРЅС‹Р№ РіРµСЂРѕР№: " << HarryPotter.MainCharacter::get_character() << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРјРѕРІ РІ СЃРµСЂРёРё: " << HarryPotter.get_AssociatedCharacterVolumeCount() << endl;
 
-    cout << "\n Физические характеристики:" << endl;
-    cout << " Формат книги: " << HarryPotter.get_AssociatedFormat() << endl;
-    cout << " Количество страниц: " << HarryPotter.PageCount::get_number_pages() << endl;
-    cout << " Вес: " << HarryPotter.BookWeight::get_weight() << " г" << endl;
-    cout << " Обложка: " << HarryPotter.Cover_Format::get_format() << endl;
-    cout << " Состояние: " << HarryPotter.BookCondition::get_condition() << endl;
+    cout << "\n Р¤РёР·РёС‡РµСЃРєРёРµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё:" << endl;
+    cout << " Р¤РѕСЂРјР°С‚ РєРЅРёРіРё: " << HarryPotter.get_AssociatedFormat() << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂР°РЅРёС†: " << HarryPotter.PageCount::get_number_pages() << endl;
+    cout << " Р’РµСЃ: " << HarryPotter.BookWeight::get_weight() << " Рі" << endl;
+    cout << " РћР±Р»РѕР¶РєР°: " << HarryPotter.Cover_Format::get_format() << endl;
+    cout << " РЎРѕСЃС‚РѕСЏРЅРёРµ: " << HarryPotter.BookCondition::get_condition() << endl;
 
-    cout << "\n Издательство и перевод:" << endl;
-    cout << " Издатель: " << HarryPotter.get_AssociatedPublisher() << endl;
-    cout << " Язык: " << HarryPotter.Language::get_language() << endl;
-    cout << " Количество переводов: " << HarryPotter.get_AssociatedTranslations() << endl;
-    cout << " Переводчик: " << HarryPotter.Translator::get_translator() << endl;
+    cout << "\n РР·РґР°С‚РµР»СЊСЃС‚РІРѕ Рё РїРµСЂРµРІРѕРґ:" << endl;
+    cout << " РР·РґР°С‚РµР»СЊ: " << HarryPotter.get_AssociatedPublisher() << endl;
+    cout << " РЇР·С‹Рє: " << HarryPotter.Language::get_language() << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРµРІРѕРґРѕРІ: " << HarryPotter.get_AssociatedTranslations() << endl;
+    cout << " РџРµСЂРµРІРѕРґС‡РёРє: " << HarryPotter.Translator::get_translator() << endl;
 
-    cout << "\n Цена и скидки:" << endl;
-    cout << " Цена: " << HarryPotter.Price::get_price() << " " << HarryPotter.Price::get_currency() << endl;
-    cout << " Скидка: " << HarryPotter.get_AssociatedDiscount() << "%" << endl;
-    cout << " Количество книг в наличии: " << HarryPotter.NumberOfBooks::get_quantity() << endl;
+    cout << "\n Р¦РµРЅР° Рё СЃРєРёРґРєРё:" << endl;
+    cout << " Р¦РµРЅР°: " << HarryPotter.Price::get_price() << " " << HarryPotter.Price::get_currency() << endl;
+    cout << " РЎРєРёРґРєР°: " << HarryPotter.get_AssociatedDiscount() << "%" << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ РєРЅРёРі РІ РЅР°Р»РёС‡РёРё: " << HarryPotter.NumberOfBooks::get_quantity() << endl;
 
-    cout << "\n Ограничения и аудитория:" << endl;
-    cout << " Возрастное ограничение: " << HarryPotter.AgeRestriction::get_age_restriction() << "+" << endl;
-    cout << " Целевая аудитория: " << HarryPotter.get_AssociatedAgeAudience() << endl;
-    cout << " Уровень образования: " << HarryPotter.EducationLevel::get_education_level() << endl;
-    cout << " Запрещена в Беларуси: " << (HarryPotter.get_AssociatedImportProhibited() ? "Да" : "Нет") << endl;
+    cout << "\n РћРіСЂР°РЅРёС‡РµРЅРёСЏ Рё Р°СѓРґРёС‚РѕСЂРёСЏ:" << endl;
+    cout << " Р’РѕР·СЂР°СЃС‚РЅРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ: " << HarryPotter.AgeRestriction::get_age_restriction() << "+" << endl;
+    cout << " Р¦РµР»РµРІР°СЏ Р°СѓРґРёС‚РѕСЂРёСЏ: " << HarryPotter.get_AssociatedAgeAudience() << endl;
+    cout << " РЈСЂРѕРІРµРЅСЊ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ: " << HarryPotter.EducationLevel::get_education_level() << endl;
+    cout << " Р—Р°РїСЂРµС‰РµРЅР° РІ Р‘РµР»Р°СЂСѓСЃРё: " << (HarryPotter.get_AssociatedImportProhibited() ? "Р”Р°" : "РќРµС‚") << endl;
 
-    cout << "\n Серия:" << endl;
-    cout << " Название серии: " << HarryPotter.BookSeries::get_series_name() << endl;
-    cout << " Ограниченная серия: " << (HarryPotter.LimitedSeries::is_limited_edition() ? "Да" : "Нет") << endl;
-    cout << " Количество томов: " << HarryPotter.get_AssociatedLimitedVolumeCount() << endl;
+    cout << "\n РЎРµСЂРёСЏ:" << endl;
+    cout << " РќР°Р·РІР°РЅРёРµ СЃРµСЂРёРё: " << HarryPotter.BookSeries::get_series_name() << endl;
+    cout << " РћРіСЂР°РЅРёС‡РµРЅРЅР°СЏ СЃРµСЂРёСЏ: " << (HarryPotter.LimitedSeries::is_limited_edition() ? "Р”Р°" : "РќРµС‚") << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРјРѕРІ: " << HarryPotter.get_AssociatedLimitedVolumeCount() << endl;
 
-    cout << "\n Электронные версии:" << endl;
-    cout << " PDF версия: " << (HarryPotter.ElectronicPDF::has_pdf_version() ? "Доступна" : "Не доступна") << endl;
-    cout << " Аудиокнига: " << (HarryPotter.get_AssociatedAudiobook() ? "Доступна" : "Не доступна") << endl;
+    cout << "\n Р­Р»РµРєС‚СЂРѕРЅРЅС‹Рµ РІРµСЂСЃРёРё:" << endl;
+    cout << " PDF РІРµСЂСЃРёСЏ: " << (HarryPotter.ElectronicPDF::has_pdf_version() ? "Р”РѕСЃС‚СѓРїРЅР°" : "РќРµ РґРѕСЃС‚СѓРїРЅР°") << endl;
+    cout << " РђСѓРґРёРѕРєРЅРёРіР°: " << (HarryPotter.get_AssociatedAudiobook() ? "Р”РѕСЃС‚СѓРїРЅР°" : "РќРµ РґРѕСЃС‚СѓРїРЅР°") << endl;
 
-    cout << "\n Отзывы и рейтинги:" << endl;
-    cout << " Рейтинг: " << HarryPotter.Rating::get_rating() << "/5" << endl;
-    cout << " Количество отзывов: " << HarryPotter.NumberOfReviews::get_number_reviews() << endl;
-    cout << " Пример отзыва: " << HarryPotter.get_AssociatedReviews() << endl;
-    cout << " Мнение: " << HarryPotter.PersonalOpinion::get_opinion() << endl;
-    cout << " Количество людей: " << HarryPotter.NumberOfPeople::get_number_people() << endl;
+    cout << "\n РћС‚Р·С‹РІС‹ Рё СЂРµР№С‚РёРЅРіРё:" << endl;
+    cout << " Р РµР№С‚РёРЅРі: " << HarryPotter.Rating::get_rating() << "/5" << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚Р·С‹РІРѕРІ: " << HarryPotter.NumberOfReviews::get_number_reviews() << endl;
+    cout << " РџСЂРёРјРµСЂ РѕС‚Р·С‹РІР°: " << HarryPotter.get_AssociatedReviews() << endl;
+    cout << " РњРЅРµРЅРёРµ: " << HarryPotter.PersonalOpinion::get_opinion() << endl;
+    cout << " РљРѕР»РёС‡РµСЃС‚РІРѕ Р»СЋРґРµР№: " << HarryPotter.NumberOfPeople::get_number_people() << endl;
 
-    cout << "\n Расположение на складе:" << endl;
-    cout << " Зал: " << HarryPotter.HollLocation::get_holl() << endl;
-    cout << " Секция: " << HarryPotter.SectionLocation::get_section() << endl;
-    cout << " Полка: " << HarryPotter.ShelfLocation::get_shelf() << endl;
-    cout << " Позиция: " << HarryPotter.PositionLocation::get_position() << endl;
+    cout << "\n Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ РЅР° СЃРєР»Р°РґРµ:" << endl;
+    cout << " Р—Р°Р»: " << HarryPotter.HollLocation::get_holl() << endl;
+    cout << " РЎРµРєС†РёСЏ: " << HarryPotter.SectionLocation::get_section() << endl;
+    cout << " РџРѕР»РєР°: " << HarryPotter.ShelfLocation::get_shelf() << endl;
+    cout << " РџРѕР·РёС†РёСЏ: " << HarryPotter.PositionLocation::get_position() << endl;
 
-    cout << "\n Поставщик и логистика:" << endl;
-    cout << " Поставщик: " << HarryPotter.Supplier::get_supplier() << endl;
-    cout << " Страна импорта: " << HarryPotter.ImportCountry::get_import_country() << endl;
-    cout << " Страна экспорта: " << HarryPotter.ExportCountry::get_export_country() << endl;
-    cout << " Дата поступления: " << HarryPotter.ArrivalDate::get_arrival_date() << endl;
+    cout << "\n РџРѕСЃС‚Р°РІС‰РёРє Рё Р»РѕРіРёСЃС‚РёРєР°:" << endl;
+    cout << " РџРѕСЃС‚Р°РІС‰РёРє: " << HarryPotter.Supplier::get_supplier() << endl;
+    cout << " РЎС‚СЂР°РЅР° РёРјРїРѕСЂС‚Р°: " << HarryPotter.ImportCountry::get_import_country() << endl;
+    cout << " РЎС‚СЂР°РЅР° СЌРєСЃРїРѕСЂС‚Р°: " << HarryPotter.ExportCountry::get_export_country() << endl;
+    cout << " Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ: " << HarryPotter.ArrivalDate::get_arrival_date() << endl;
 
-    cout << "\n Пользователь и Ассистент:" << endl;
-    cout << " Пользователь: " << HarryPotter.get_AssociatedLoyaltyUserName() << endl;
-    cout << " Куплено книг: " << user.get_books_bought() << endl;
-    cout << " Опыт ассистента: " << HarryPotter.get_AssociatedExperience() << " лет" << endl;
-    cout << " Имя ассистента: " << HarryPotter.AssistantName::get_name() << endl;
+    cout << "\n РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ Рё РђСЃСЃРёСЃС‚РµРЅС‚:" << endl;
+    cout << " РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ: " << HarryPotter.get_AssociatedLoyaltyUserName() << endl;
+    cout << " РљСѓРїР»РµРЅРѕ РєРЅРёРі: " << user.get_books_bought() << endl;
+    cout << " РћРїС‹С‚ Р°СЃСЃРёСЃС‚РµРЅС‚Р°: " << HarryPotter.get_AssociatedExperience() << " Р»РµС‚" << endl;
+    cout << " РРјСЏ Р°СЃСЃРёСЃС‚РµРЅС‚Р°: " << HarryPotter.AssistantName::get_name() << endl;
 
     cout << "\n" << string(40, '=') << endl;
     cout << string(40, '=') << endl;
 
     try {
         string genre;
-        cout << "К какому жанру относится книга 'Harry Potter'? (например: Fantasy, Detective, Romance, etc.): ";
+        cout << "Рљ РєР°РєРѕРјСѓ Р¶Р°РЅСЂСѓ РѕС‚РЅРѕСЃРёС‚СЃСЏ РєРЅРёРіР° 'Harry Potter'? (РЅР°РїСЂРёРјРµСЂ: Fantasy, Detective, Romance, etc.): ";
         getline(cin, genre);
         HarryPotter.set_Genre(genre);
     }
     catch (const GenreException& ex) {
-        cout << "Ошибка жанра: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° Р¶Р°РЅСЂР°: " << ex.what() << endl;
     }
 
     try {
         string naz;
-        cout << "Подтвердите покупку книги, указав ее название (Harry Potter): ";
+        cout << "РџРѕРґС‚РІРµСЂРґРёС‚Рµ РїРѕРєСѓРїРєСѓ РєРЅРёРіРё, СѓРєР°Р·Р°РІ РµРµ РЅР°Р·РІР°РЅРёРµ (Harry Potter): ";
         getline(cin, naz);
         HarryPotter.set_Book(naz);
     }
     catch (const BookTitleException& ex) { 
-        cout << "Ошибка названия: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° РЅР°Р·РІР°РЅРёСЏ: " << ex.what() << endl;
     }
 
     try {
         string tag;
-        cout << "Введите желаемый тэг для данной книги (Magic): ";
+        cout << "Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ С‚СЌРі РґР»СЏ РґР°РЅРЅРѕР№ РєРЅРёРіРё (Magic): ";
         getline(cin, tag);
         HarryPotter.set_Tag(tag);
     }
     catch (const TagException& ex) { 
-        cout << "Ошибка тега: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° С‚РµРіР°: " << ex.what() << endl;
     }
     try {
         string obl;
-        cout << "В какой обложке вы бы хотели приобрести книгу (Soft/Hard)?: ";
+        cout << "Р’ РєР°РєРѕР№ РѕР±Р»РѕР¶РєРµ РІС‹ Р±С‹ С…РѕС‚РµР»Рё РїСЂРёРѕР±СЂРµСЃС‚Рё РєРЅРёРіСѓ (Soft/Hard)?: ";
         getline(cin, obl);
         HarryPotter.set_format(obl);
     }
     catch (const CoverFormatException& ex) {  
-        cout << "Ошибка формата: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° С„РѕСЂРјР°С‚Р°: " << ex.what() << endl;
     }
 
     try {
         int v;
-        cout << "Введите возраст, чтобы узнать, разрешено ли вам читать данную книгу: ";
+        cout << "Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚, С‡С‚РѕР±С‹ СѓР·РЅР°С‚СЊ, СЂР°Р·СЂРµС€РµРЅРѕ Р»Рё РІР°Рј С‡РёС‚Р°С‚СЊ РґР°РЅРЅСѓСЋ РєРЅРёРіСѓ: ";
         cin >> v;
         HarryPotter.set_age_restriction(v);
     }
     catch (const AgeRestrictionException& ex) {  
-        cout << "Ошибка возраста: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° РІРѕР·СЂР°СЃС‚Р°: " << ex.what() << endl;
     }
 
     try {
         double r;
-        cout << "Введите желаемый рейтинг: ";
+        cout << "Р’РІРµРґРёС‚Рµ Р¶РµР»Р°РµРјС‹Р№ СЂРµР№С‚РёРЅРі: ";
         cin >> r;
         HarryPotter.set_rating(r);
     }
     catch (const RatingException& ex) { 
-        cout << "Ошибка рейтинга: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° СЂРµР№С‚РёРЅРіР°: " << ex.what() << endl;
     }
 
     try {
         int str;
-        cout << "Сколько страниц вы можете осилить? ";
+        cout << "РЎРєРѕР»СЊРєРѕ СЃС‚СЂР°РЅРёС† РІС‹ РјРѕР¶РµС‚Рµ РѕСЃРёР»РёС‚СЊ? ";
         cin >> str;
         HarryPotter.set_number_pages(str);
     }
     catch (const PageCountException& ex) {  
-        cout << "Ошибка страниц: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° СЃС‚СЂР°РЅРёС†: " << ex.what() << endl;
     }
 
     try {
         string izd;
-        cout << "От какого издательства вы бы хотели прочесть данную книгу (например: Barbin, Gosselin, L.C. Page & Co., The Russian Messenger)? ";
+        cout << "РћС‚ РєР°РєРѕРіРѕ РёР·РґР°С‚РµР»СЊСЃС‚РІР° РІС‹ Р±С‹ С…РѕС‚РµР»Рё РїСЂРѕС‡РµСЃС‚СЊ РґР°РЅРЅСѓСЋ РєРЅРёРіСѓ (РЅР°РїСЂРёРјРµСЂ: Barbin, Gosselin, L.C. Page & Co., The Russian Messenger)? ";
         cin >> izd;
         HarryPotter.set_publisher(izd);
     }
     catch (const PublisherException& ex) { 
-        cout << "Ошибка издательства: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° РёР·РґР°С‚РµР»СЊСЃС‚РІР°: " << ex.what() << endl;
     }
 
     try {
         string god;
-        cout << "В каком временном промежутке вы бы хотели прочесть данную книгу (например, 80е)? ";
+        cout << "Р’ РєР°РєРѕРј РІСЂРµРјРµРЅРЅРѕРј РїСЂРѕРјРµР¶СѓС‚РєРµ РІС‹ Р±С‹ С…РѕС‚РµР»Рё РїСЂРѕС‡РµСЃС‚СЊ РґР°РЅРЅСѓСЋ РєРЅРёРіСѓ (РЅР°РїСЂРёРјРµСЂ, 80Рµ)? ";
         cin >> god;
         HarryPotter.set_Year(god);
     }
     catch (const YearException& ex) { 
-        cout << "Ошибка года: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° РіРѕРґР°: " << ex.what() << endl;
     }
 
     try {
         string lg;
-        cout << "В каком переводе вы бы хотели прочесть данную книгу? ";
+        cout << "Р’ РєР°РєРѕРј РїРµСЂРµРІРѕРґРµ РІС‹ Р±С‹ С…РѕС‚РµР»Рё РїСЂРѕС‡РµСЃС‚СЊ РґР°РЅРЅСѓСЋ РєРЅРёРіСѓ? ";
         cin >> lg;
         HarryPotter.set_language(lg);
     }
     catch (const LanguageException& ex) {
-        cout << "Ошибка языка: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° СЏР·С‹РєР°: " << ex.what() << endl;
     }
 
     try {
         int t1;
-        cout << "Как вы думаете, сколько книг написала Джоан Роулинг? : ";
+        cout << "РљР°Рє РІС‹ РґСѓРјР°РµС‚Рµ, СЃРєРѕР»СЊРєРѕ РєРЅРёРі РЅР°РїРёСЃР°Р»Р° Р”Р¶РѕР°РЅ Р РѕСѓР»РёРЅРі? : ";
         cin >> t1;
         HarryPotter.set_books(t1);
     }
     catch (const AuthorBooksException& ex) {  
-        cout << "Ошибка автора: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° Р°РІС‚РѕСЂР°: " << ex.what() << endl;
     }
 
     try {
         int t2;
-        cout << "Как вы думаете, в каком году родилась Джоан Роулинг?: ";
+        cout << "РљР°Рє РІС‹ РґСѓРјР°РµС‚Рµ, РІ РєР°РєРѕРј РіРѕРґСѓ СЂРѕРґРёР»Р°СЃСЊ Р”Р¶РѕР°РЅ Р РѕСѓР»РёРЅРі?: ";
         cin >> t2;
         HarryPotter.set_birth(t2);
     }
     catch (const AuthorBirthException& ex) { 
-        cout << "Ошибка автора: " << ex.what() << endl;
+        cout << "РћС€РёР±РєР° Р°РІС‚РѕСЂР°: " << ex.what() << endl;
     }
 
     return 0;
