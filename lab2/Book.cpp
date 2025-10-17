@@ -20,10 +20,10 @@ string Tag::get_Tag() { return book_tag; }
 
 void Tag::set_Tag(string tg) {
     if (tg != "Magic") {
-        throw TagException("Данная книга не содержит данного тега");
+        throw TagException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РЅРµ СЃРѕРґРµСЂР¶РёС‚ РґР°РЅРЅРѕРіРѕ С‚РµРіР°");
     }
     else {
-        cout << " Хорошего чтения!" << endl;
+        cout << " РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     book_tag = tg;
 }
@@ -35,10 +35,10 @@ string Genre::get_AssociatedTag() { return associatedTag.get_Tag(); }
 
 void Genre::set_Genre(string gen) {
     if (gen != "Fantasy") {
-        throw GenreException("Данная книга не относится к этому жанру");
+        throw GenreException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РЅРµ РѕС‚РЅРѕСЃРёС‚СЃСЏ Рє СЌС‚РѕРјСѓ Р¶Р°РЅСЂСѓ");
     }
     else {
-        cout << "Книга Harry Potter относится к жанру Фэнтези. Хорошего чтения!" << endl;
+        cout << "РљРЅРёРіР° Harry Potter РѕС‚РЅРѕСЃРёС‚СЃСЏ Рє Р¶Р°РЅСЂСѓ Р¤СЌРЅС‚РµР·Рё. РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
 }
  
@@ -49,10 +49,10 @@ void YearOfManufacture::set_Year(int y) { year = y; }
 
 void YearOfManufacture::set_Year(string g) {
     if (g != "90e") {
-        throw YearException("Данная книга не относится к этому времени");
+        throw YearException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РЅРµ РѕС‚РЅРѕСЃРёС‚СЃСЏ Рє СЌС‚РѕРјСѓ РІСЂРµРјРµРЅРё");
     }
     else {
-        cout << "Данная книга 1997 года. Хорошего чтения!" << endl;
+        cout << "Р”Р°РЅРЅР°СЏ РєРЅРёРіР° 1997 РіРѕРґР°. РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
 }
  
@@ -66,10 +66,10 @@ string Language::get_language() { return language; }
 
 void Language::set_language(string l) {
     if (l != "English") {
-        throw LanguageException("Данной книги в таком переводе нет");
+        throw LanguageException("Р”Р°РЅРЅРѕР№ РєРЅРёРіРё РІ С‚Р°РєРѕРј РїРµСЂРµРІРѕРґРµ РЅРµС‚");
     }
     else {
-        cout << "Хорошего чтения!" << endl;
+        cout << "РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     language = l;
 }
@@ -77,7 +77,7 @@ void Language::set_language(string l) {
 Author::Author(const string& n, const string& by, int bw, const Country& country, const Language& language)
     : name(n), birth_year(by), books_written(bw), associatedCountry(country), associatedLanguage(language) {
 }
-Author::Author() : name("Автор : Joanne Rowling"), birth_year("1965 год"), books_written(15),
+Author::Author() : name("РђРІС‚РѕСЂ : Joanne Rowling"), birth_year("1965 РіРѕРґ"), books_written(15),
 associatedCountry(Country("United Kingdom")), associatedLanguage(Language("English")) {
 }
 string Author::get_Author() { return name; }
@@ -88,19 +88,19 @@ string Author::get_AssociatedLanguage() { return associatedLanguage.get_language
 
 void Author::set_birth(int by) {
     if (by != 1965) {
-        throw AuthorBirthException("Не угадали, почитайте биографию");
+        throw AuthorBirthException("РќРµ СѓРіР°РґР°Р»Рё, РїРѕС‡РёС‚Р°Р№С‚Рµ Р±РёРѕРіСЂР°С„РёСЋ");
     }
     else {
-        cout << "Угадали!" << endl;
+        cout << "РЈРіР°РґР°Р»Рё!" << endl;
     }
 }
 
 void Author::set_books(int bw) {
     if (bw != 15) {
-        throw AuthorBooksException("Не угадали, почитайте биографию");
+        throw AuthorBooksException("РќРµ СѓРіР°РґР°Р»Рё, РїРѕС‡РёС‚Р°Р№С‚Рµ Р±РёРѕРіСЂР°С„РёСЋ");
     }
     else {
-        cout << "Угадали!" << endl;
+        cout << "РЈРіР°РґР°Р»Рё!" << endl;
     }
     books_written = bw;
 }
@@ -132,10 +132,10 @@ double Rating::get_rating() { return rating; }
 
 void Rating::set_rating(double r) {
     if (r <= 4.7 || r > 5.0) {
-        throw RatingException("Данная книга не подходит по желаемому рейтингу");
+        throw RatingException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РЅРµ РїРѕРґС…РѕРґРёС‚ РїРѕ Р¶РµР»Р°РµРјРѕРјСѓ СЂРµР№С‚РёРЅРіСѓ");
     }
     else {
-        cout << "Хорошего чтения!" << endl;
+        cout << "РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     rating = r;
 }
@@ -146,10 +146,10 @@ string Publisher::get_publisher() { return publisher; }
 
 void Publisher::set_publisher(string p) {
     if (p != "Bloomsbury") {
-        throw PublisherException("Данная книга выпущена другим издательством");
+        throw PublisherException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РІС‹РїСѓС‰РµРЅР° РґСЂСѓРіРёРј РёР·РґР°С‚РµР»СЊСЃС‚РІРѕРј");
     }
     else {
-        cout << " Хорошего чтения!" << endl;
+        cout << " РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     publisher = p;
 }
@@ -177,10 +177,10 @@ int PageCount::get_number_pages() { return number_pages; }
 
 void PageCount::set_number_pages(int n) {
     if (n < 362) {
-        throw PageCountException("Количество страниц в данной книге больше, чем вы ожидали");
+        throw PageCountException("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂР°РЅРёС† РІ РґР°РЅРЅРѕР№ РєРЅРёРіРµ Р±РѕР»СЊС€Рµ, С‡РµРј РІС‹ РѕР¶РёРґР°Р»Рё");
     }
     else {
-        cout << "Хорошего чтения!" << endl;
+        cout << "РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     number_pages = n;
 }
@@ -203,10 +203,10 @@ string BookTitle::get_Book() { return title_book; }
 
 void BookTitle::set_Book(string tb) {
     if (tb != "Harry Potter") {
-        throw BookTitleException("Название не соответствует введенному, заявка отклонена");
+        throw BookTitleException("РќР°Р·РІР°РЅРёРµ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РІРІРµРґРµРЅРЅРѕРјСѓ, Р·Р°СЏРІРєР° РѕС‚РєР»РѕРЅРµРЅР°");
     }
     else {
-        cout << " Хорошего чтения!" << endl;
+        cout << " РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     title_book = tb;
 }
@@ -272,7 +272,7 @@ int PositionLocation::get_position() { return position; }
 ShelfLocation::ShelfLocation(const string& sh, const PositionLocation& position)
     : shelf(sh), associatedPosition(position) {
 }
-ShelfLocation::ShelfLocation() : shelf("третья"), associatedPosition(PositionLocation(15)) {}
+ShelfLocation::ShelfLocation() : shelf("С‚СЂРµС‚СЊСЏ"), associatedPosition(PositionLocation(15)) {}
 string ShelfLocation::get_shelf() { return shelf; }
 int ShelfLocation::get_AssociatedPosition() { return associatedPosition.get_position(); }
 
@@ -280,16 +280,16 @@ SectionLocation::SectionLocation(const string& sec, const ShelfLocation& shelf)
     : section(sec), associatedShelf(shelf) {
 }
 SectionLocation::SectionLocation(const string& sec)
-    : section(sec), associatedShelf(ShelfLocation("третья", PositionLocation(15))) {
+    : section(sec), associatedShelf(ShelfLocation("С‚СЂРµС‚СЊСЏ", PositionLocation(15))) {
 }
-SectionLocation::SectionLocation() : section("A"), associatedShelf(ShelfLocation("третья", PositionLocation(15))) {}
+SectionLocation::SectionLocation() : section("A"), associatedShelf(ShelfLocation("С‚СЂРµС‚СЊСЏ", PositionLocation(15))) {}
 string SectionLocation::get_section() { return section; }
 string SectionLocation::get_AssociatedShelf() { return associatedShelf.get_shelf(); }
 
 HollLocation::HollLocation(int h, const SectionLocation& section)
     : holl(h), associatedSection(section) {
 }
-HollLocation::HollLocation() : holl(1), associatedSection(SectionLocation("A", ShelfLocation("третья", PositionLocation(15)))) {}
+HollLocation::HollLocation() : holl(1), associatedSection(SectionLocation("A", ShelfLocation("С‚СЂРµС‚СЊСЏ", PositionLocation(15)))) {}
 int HollLocation::get_holl() { return holl; }
 string HollLocation::get_AssociatedSection() { return associatedSection.get_section(); }
 
@@ -328,29 +328,29 @@ bool ElectronicPDF::has_pdf_version() { return has_pdf; }
 bool ElectronicPDF::get_AssociatedAudiobook() { return associatedAudiobook.has_audiobook_version(); }
 
 Reviews::Reviews(const string& rev) : reviews(rev) {}
-Reviews::Reviews() : reviews("Отличная книга о магии и приключениях!") {}
+Reviews::Reviews() : reviews("РћС‚Р»РёС‡РЅР°СЏ РєРЅРёРіР° Рѕ РјР°РіРёРё Рё РїСЂРёРєР»СЋС‡РµРЅРёСЏС…!") {}
 string Reviews::get_reviews() { return reviews; }
 
 NumberOfReviews::NumberOfReviews(int nr, const Reviews& reviews)
     : number_reviews(nr), associatedReviews(reviews) {
 }
-NumberOfReviews::NumberOfReviews() : number_reviews(1000), associatedReviews(Reviews("Отличная книга о магии и приключениях!")) {}
+NumberOfReviews::NumberOfReviews() : number_reviews(1000), associatedReviews(Reviews("РћС‚Р»РёС‡РЅР°СЏ РєРЅРёРіР° Рѕ РјР°РіРёРё Рё РїСЂРёРєР»СЋС‡РµРЅРёСЏС…!")) {}
 int NumberOfReviews::get_number_reviews() { return number_reviews; }
 string NumberOfReviews::get_AssociatedReviews() { return associatedReviews.get_reviews(); }
 
 User::User(const string& user_name) : name(user_name), books_bought(0) {}
-User::User() : name("Гость"), books_bought(0) {}
+User::User() : name("Р“РѕСЃС‚СЊ"), books_bought(0) {}
 string User::get_name() { return name; }
 int User::get_books_bought() { return books_bought; }
 void User::add_purchased_book() {
     books_bought++;
-    cout << name << " купил книгу. Всего книг: " << books_bought << endl;
+    cout << name << " РєСѓРїРёР» РєРЅРёРіСѓ. Р’СЃРµРіРѕ РєРЅРёРі: " << books_bought << endl;
 }
 
 AgeRestriction::AgeRestriction(int age, const TargetAudience& audience, const User& user)
     : age_restriction(age), associatedAudience(audience), associatedUser(user) {
 }
-AgeRestriction::AgeRestriction() : age_restriction(12), associatedAudience(TargetAudience("teenagers", EducationLevel("middle_school"))), associatedUser(User("Гость")) {}
+AgeRestriction::AgeRestriction() : age_restriction(12), associatedAudience(TargetAudience("teenagers", EducationLevel("middle_school"))), associatedUser(User("Р“РѕСЃС‚СЊ")) {}
 int AgeRestriction::get_age_restriction() { return age_restriction; }
 string AgeRestriction::get_AssociatedAudience() { return associatedAudience.get_audience_type(); }
 string AgeRestriction::get_AssociatedAudienceEducation() { return associatedAudience.get_AssociatedEducationLevel(); }
@@ -359,10 +359,10 @@ int AgeRestriction::get_AssociatedUserBooks() { return associatedUser.get_books_
 
 void AgeRestriction::set_age_restriction(int v) {
     if (v < 12) {
-        throw AgeRestrictionException("Данная книга ограничена для вашего возраста");
+        throw AgeRestrictionException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РѕРіСЂР°РЅРёС‡РµРЅР° РґР»СЏ РІР°С€РµРіРѕ РІРѕР·СЂР°СЃС‚Р°");
     }
     else {
-        cout << "Хорошего чтения!" << endl;
+        cout << "РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     age_restriction = v;
 }
@@ -371,19 +371,19 @@ LoyaltyProgram::LoyaltyProgram(const User& user_obj) : associatedUser(user_obj),
 LoyaltyProgram::LoyaltyProgram() : discount_percentage(0), has_user(false) {}
 void LoyaltyProgram::update_discount() {
     if (!has_user) {
-        cout << "Ошибка: пользователь не установлен" << endl;
+        cout << "РћС€РёР±РєР°: РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ" << endl;
         return;
     }
     int books_bought = associatedUser.get_books_bought();
     if (books_bought >= 5) {
         discount_percentage = 50.0;
-        cout << "Поздравляем! " << associatedUser.get_name()
-            << " получает постоянную скидку 50% за покупку " << books_bought << " книг!" << endl;
+        cout << "РџРѕР·РґСЂР°РІР»СЏРµРј! " << associatedUser.get_name()
+            << " РїРѕР»СѓС‡Р°РµС‚ РїРѕСЃС‚РѕСЏРЅРЅСѓСЋ СЃРєРёРґРєСѓ 50% Р·Р° РїРѕРєСѓРїРєСѓ " << books_bought << " РєРЅРёРі!" << endl;
     }
     else {
         discount_percentage = 0;
-        cout << associatedUser.get_name() << " купил " << books_bought
-            << " книг. До скидки 50% осталось: " << (5 - books_bought) << " книг" << endl;
+        cout << associatedUser.get_name() << " РєСѓРїРёР» " << books_bought
+            << " РєРЅРёРі. Р”Рѕ СЃРєРёРґРєРё 50% РѕСЃС‚Р°Р»РѕСЃСЊ: " << (5 - books_bought) << " РєРЅРёРі" << endl;
     }
 }
 double LoyaltyProgram::get_discount() {
@@ -392,17 +392,17 @@ double LoyaltyProgram::get_discount() {
 }
 double LoyaltyProgram::apply_discount(double original_price) {
     if (!has_user) {
-        cout << "Ошибка: пользователь не установлен, скидка не применяется" << endl;
+        cout << "РћС€РёР±РєР°: РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, СЃРєРёРґРєР° РЅРµ РїСЂРёРјРµРЅСЏРµС‚СЃСЏ" << endl;
         return original_price;
     }
     double discounted_price = original_price * (1 - discount_percentage / 100);
-    cout << "Цена: " << original_price << " USD -> Со скидкой "
+    cout << "Р¦РµРЅР°: " << original_price << " USD -> РЎРѕ СЃРєРёРґРєРѕР№ "
         << discount_percentage << "%: " << discounted_price << " USD" << endl;
     return discounted_price;
 }
 string LoyaltyProgram::get_AssociatedUserName() {
     if (has_user) { return associatedUser.get_name(); }
-    return "Пользователь не установлен";
+    return "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ";
 }
 int LoyaltyProgram::get_AssociatedUserBooks() {
     if (has_user) { return associatedUser.get_books_bought(); }
@@ -417,7 +417,7 @@ bool LoyaltyProgram::has_user_set() const { return has_user; }
 NumberOfPeople::NumberOfPeople(int people, const User& user)
     : number_people(people), associatedUser(user) {
 }
-NumberOfPeople::NumberOfPeople() : number_people(1000), associatedUser(User("Гость")) {}
+NumberOfPeople::NumberOfPeople() : number_people(1000), associatedUser(User("Р“РѕСЃС‚СЊ")) {}
 int NumberOfPeople::get_number_people() { return number_people; }
 string NumberOfPeople::get_AssociatedUserName() { return associatedUser.get_name(); }
 int NumberOfPeople::get_AssociatedUserBooks() { return associatedUser.get_books_bought(); }
@@ -425,7 +425,7 @@ int NumberOfPeople::get_AssociatedUserBooks() { return associatedUser.get_books_
 PersonalOpinion::PersonalOpinion(const string& op, const NumberOfPeople& people)
     : opinion(op), associatedPeople(people) {
 }
-PersonalOpinion::PersonalOpinion() : opinion("Рекомендую к прочтению!"), associatedPeople(NumberOfPeople(1000, User("Гость"))) {}
+PersonalOpinion::PersonalOpinion() : opinion("Р РµРєРѕРјРµРЅРґСѓСЋ Рє РїСЂРѕС‡С‚РµРЅРёСЋ!"), associatedPeople(NumberOfPeople(1000, User("Р“РѕСЃС‚СЊ"))) {}
 string PersonalOpinion::get_opinion() { return opinion; }
 int PersonalOpinion::get_AssociatedPeople() { return associatedPeople.get_number_people(); }
 
@@ -441,15 +441,15 @@ PurchasedBook::PurchasedBook(const string& title, const string& date, double pri
     : book_title(title), purchase_date(date), purchase_price(price), user_name(user) {
 }
 PurchasedBook::PurchasedBook() : book_title("Harry Potter"), purchase_date("12-10-2025"),
-purchase_price(25.99), user_name("Гость") {
+purchase_price(25.99), user_name("Р“РѕСЃС‚СЊ") {
 }
 string PurchasedBook::get_book_title() { return book_title; }
 string PurchasedBook::get_purchase_date() { return purchase_date; }
 double PurchasedBook::get_purchase_price() { return purchase_price; }
 string PurchasedBook::get_user_name() { return user_name; }
 void PurchasedBook::display_purchase_info() {
-    cout << "Покупка: " << book_title << " | Цена: " << purchase_price
-        << " | Дата: " << purchase_date << " | Покупатель: " << user_name << endl;
+    cout << "РџРѕРєСѓРїРєР°: " << book_title << " | Р¦РµРЅР°: " << purchase_price
+        << " | Р”Р°С‚Р°: " << purchase_date << " | РџРѕРєСѓРїР°С‚РµР»СЊ: " << user_name << endl;
 }
 
 Cover_Format::Cover_Format(const string& f, const Publisher& publisher) : format(f), associatedPublisher(publisher) {}
@@ -459,20 +459,20 @@ string Cover_Format::get_AssociatedPublisher() { return associatedPublisher.get_
 
 void Cover_Format::set_format(string f) {
     if (f != "Hard") {
-        throw CoverFormatException("Данная книга есть только в Твердой обложке");
+        throw CoverFormatException("Р”Р°РЅРЅР°СЏ РєРЅРёРіР° РµСЃС‚СЊ С‚РѕР»СЊРєРѕ РІ РўРІРµСЂРґРѕР№ РѕР±Р»РѕР¶РєРµ");
     }
     else {
-        cout << " Хорошего чтения!" << endl;
+        cout << " РҐРѕСЂРѕС€РµРіРѕ С‡С‚РµРЅРёСЏ!" << endl;
     }
     format = f;
 }
 
 BookArrivalNotification::BookArrivalNotification(const string& title, const ArrivalDate& arrivalDate)
     : book_title(title), is_sent(false), associatedArrivalDate(arrivalDate) {
-    notification_message = "Уведомление: Книга '" + book_title + "' поступила в продажу! Дата: " + associatedArrivalDate.get_arrival_date();
+    notification_message = "РЈРІРµРґРѕРјР»РµРЅРёРµ: РљРЅРёРіР° '" + book_title + "' РїРѕСЃС‚СѓРїРёР»Р° РІ РїСЂРѕРґР°Р¶Сѓ! Р”Р°С‚Р°: " + associatedArrivalDate.get_arrival_date();
 }
 BookArrivalNotification::BookArrivalNotification() : book_title("Harry Potter"), is_sent(false), associatedArrivalDate(ArrivalDate("12-10-2025")) {
-    notification_message = "Уведомление: Книга '" + book_title + "' поступила в продажу! Дата: " + associatedArrivalDate.get_arrival_date();
+    notification_message = "РЈРІРµРґРѕРјР»РµРЅРёРµ: РљРЅРёРіР° '" + book_title + "' РїРѕСЃС‚СѓРїРёР»Р° РІ РїСЂРѕРґР°Р¶Сѓ! Р”Р°С‚Р°: " + associatedArrivalDate.get_arrival_date();
 }
 void BookArrivalNotification::send_notification() {
     if (!is_sent) {
@@ -480,7 +480,7 @@ void BookArrivalNotification::send_notification() {
         is_sent = true;
     }
     else {
-        cout << "Уведомление для книги '" << book_title << "' уже было отправлено" << endl;
+        cout << "РЈРІРµРґРѕРјР»РµРЅРёРµ РґР»СЏ РєРЅРёРіРё '" << book_title << "' СѓР¶Рµ Р±С‹Р»Рѕ РѕС‚РїСЂР°РІР»РµРЅРѕ" << endl;
     }
 }
 string BookArrivalNotification::get_book_title() { return book_title; }
@@ -495,7 +495,7 @@ int WorkExperience::get_years_of_experience() const { return years_of_experience
 AssistantName::AssistantName(const string& name, const WorkExperience& experience)
     : assistantname(name), associatedExperience(experience) {
 }
-AssistantName::AssistantName() : assistantname("Неизвестный"), associatedExperience(WorkExperience(0)) {}
+AssistantName::AssistantName() : assistantname("РќРµРёР·РІРµСЃС‚РЅС‹Р№"), associatedExperience(WorkExperience(0)) {}
 string AssistantName::get_name() const { return assistantname; }
 int AssistantName::get_AssociatedExperience() { return associatedExperience.get_years_of_experience(); }
 
