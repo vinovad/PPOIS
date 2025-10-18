@@ -1,18 +1,12 @@
 /**
  * @file CoverFormatException.h
- * @brief Исключение для работы с форматами обложки
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„РѕСЂРјР°С‚Р°РјРё РѕР±Р»РѕР¶РєРё
  */
-
 #ifndef COVER_FORMAT_EXCEPTION_H
 #define COVER_FORMAT_EXCEPTION_H
-
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class CoverFormatException : public runtime_error {
-public:
-    CoverFormatException(const string& msg) : runtime_error(msg) {}
-};
-
+public:    CoverFormatException(const string& msg) : runtime_error(msg) {} };
 #endif
