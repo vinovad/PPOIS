@@ -1,18 +1,12 @@
 /**
  * @file YearException.h
- * @brief Исключение для работы с годами издания
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РіРѕРґР°РјРё РёР·РґР°РЅРёСЏ
  */
-
 #ifndef YEAR_EXCEPTION_H
 #define YEAR_EXCEPTION_H
-
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class YearException : public runtime_error {
-public:
-    YearException(const string& msg) : runtime_error(msg) {}
-};
-
+public: YearException(const string& msg) : runtime_error(msg) {} };
 #endif
