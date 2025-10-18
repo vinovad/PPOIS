@@ -1,18 +1,12 @@
 /**
  * @file AgeRestrictionException.h
- * @brief Исключение для работы с возрастными ограничениями
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РІРѕР·СЂР°СЃС‚РЅС‹РјРё РѕРіСЂР°РЅРёС‡РµРЅРёСЏРјРё
  */
-
 #ifndef AGE_RESTRICTION_EXCEPTION_H
 #define AGE_RESTRICTION_EXCEPTION_H
-
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class AgeRestrictionException : public runtime_error {
-public:
-    AgeRestrictionException(const string& msg) : runtime_error(msg) {}
-};
-
+public: AgeRestrictionException(const string& msg) : runtime_error(msg) {} };
 #endif
