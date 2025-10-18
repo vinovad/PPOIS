@@ -1,18 +1,13 @@
 /**
  * @file PageCountException.h
- * @brief Исключение для работы с количеством страниц
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РєРѕР»РёС‡РµСЃС‚РІРѕРј СЃС‚СЂР°РЅРёС†
  */
-
 #ifndef PAGE_COUNT_EXCEPTION_H
 #define PAGE_COUNT_EXCEPTION_H
 
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class PageCountException : public runtime_error {
-public:
-    PageCountException(const string& msg) : runtime_error(msg) {}
-};
-
+public: PageCountException(const string& msg) : runtime_error(msg) {} };
 #endif
