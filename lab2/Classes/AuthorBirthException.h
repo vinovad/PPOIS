@@ -1,18 +1,12 @@
 /**
  * @file AuthorBirthException.h
- * @brief Исключение для ошибок в дате рождения автора
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ РѕС€РёР±РѕРє РІ РґР°С‚Рµ СЂРѕР¶РґРµРЅРёСЏ Р°РІС‚РѕСЂР°
  */
-
 #ifndef AUTHOR_BIRTH_EXCEPTION_H
 #define AUTHOR_BIRTH_EXCEPTION_H
-
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class AuthorBirthException : public runtime_error {
-public:
-    AuthorBirthException(const string& msg) : runtime_error(msg) {}
-};
-
+public: AuthorBirthException(const string& msg) : runtime_error(msg) {} };
 #endif
