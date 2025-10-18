@@ -1,18 +1,12 @@
 /**
  * @file AuthorBooksException.h
- * @brief Исключение для ошибок в количестве книг автора
+ * @brief РСЃРєР»СЋС‡РµРЅРёРµ РґР»СЏ РѕС€РёР±РѕРє РІ РєРѕР»РёС‡РµСЃС‚РІРµ РєРЅРёРі Р°РІС‚РѕСЂР°
  */
-
 #ifndef AUTHOR_BOOKS_EXCEPTION_H
 #define AUTHOR_BOOKS_EXCEPTION_H
-
 #include <stdexcept>
 #include <string>
 using namespace std;
-
 class AuthorBooksException : public runtime_error {
-public:
-    AuthorBooksException(const string& msg) : runtime_error(msg) {}
-};
-
+public:   AuthorBooksException(const string& msg) : runtime_error(msg) {} };
 #endif
