@@ -9,7 +9,7 @@ public:
     int age;
     double grade;
     Userclass(const std::string& n, int a, double g) : name(n), age(a), grade(g) {}
-    // Оператор для сортировки по умолчанию (по оценке)
+    // Оператор для сортировки по умолчанию
     bool operator<(const Userclass& other) const { return grade < other.grade;}
     friend std::ostream& operator<<(std::ostream& os, const Userclass& s) {
         os << s.name << " (возраст: " << s.age << ", оценка: " << s.grade << ")";
