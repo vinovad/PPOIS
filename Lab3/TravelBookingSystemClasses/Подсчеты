@@ -1,62 +1,62 @@
  ОТЧЕТ ПО СИСТЕМЕ БРОНИРОВАНИЯ ПУТЕШЕСТВИЙ
 
-- Airport: 11 полей, 8 методов, ассоциация Airport->Coordinates
-- BisnessClassFlight: 0 полей, 1 метод
-- Boat: 0 полей, 1 метод
-- Booking: 7 полей, 5 методов, ассоциация Booking->Trip, Booking->Date, Booking->Review
-- Bus: 0 полей, 1 метод
-- Car: 1 поле, 1 метод, ассоциация Car->CarAgent
-- CarAgent: 1 поле, 1 метод
-- City: 1 поле, 1 метод
-- ContactInfo: 2 поля, 2 метода
+- Airport: 11 полей, 7 методов, ассоциация Airport->Coordinates
+- BisnessClassFlight: 1 поле, 2 метода
+- Boat: 1 поле, 2 метода
+- Booking: 7 полей, 4 метода, ассоциация Booking->Trip, Booking->Date, Booking->Review
+- Bus: 1 поле, 2 метода
+- Car: 1 поле, 2 метода, ассоциация Car->CarAgent
+- CarAgent: 1 поле, 2 метода
+- City: 1 поле, 2 метода
+- ContactInfo: 2 поля, 1 метод
 - Coordinates: 3 поля, 1 метод, ассоциация Coordinates->City
-- Coupon: 3 поля, 3 метода
-- CreditCard: 4 поля, 3 метода
-- Currency: 8 полей, 9 методов
-- Customer: 2 поля, 2 метода
-- Date: 3 поля, 6 методов
-- DateRange: 0 полей, 2 метода
-- Destination: 10 полей, 9 методов, ассоциация Destination->Coordinates, Destination->City
-- EconomyClassFlight: 0 полей, 1 метод
-- ElectricCar: 1 поле, 1 метод, ассоциация ElectricCar->CarAgent
-- ExpressBus: 0 полей, 1 метод
-- Flight: 0 полей, 1 метод
-- HelicopterTransfer: 0 полей, 1 метод
-- HighSpeedTrain: 0 полей, 1 метод
-- Hotel: 1 поле, 2 метода, ассоциация Hotel->Coordinates
-- Insurance: 10 полей, 10 методов, ассоциация Insurance->Date
-- Itinerary: 9 полей, 9 методов, ассоциация Itinerary->Trip, Itinerary->Date
-- LoyalityProgramm: 1 поле, 3 метода
-- LuxuryBus: 0 полей, 1 метод
-- LuxuryTrain: 0 полей, 1 метод
-- MiniBus: 0 полей, 1 метод
-- Notification: 12 полей, 8 методов, ассоциация Notification->Date, Notification->TimeClass
-- Passport: 9 полей, 7 методов, ассоциация Passport->Date
-- Payment: 10 полей, 7 методов, ассоциация Payment->CreditCard, Payment->Date
-- Port: 11 полей, 9 методов, ассоциация Port->Coordinates
-- Refund: 10 полей, 9 методов, ассоциация Refund->Payment, Refund->Date
-- RegionalTrain: 0 полей, 1 метод
-- Review: 4 поля, 2 метода
-- Room: 4 поля, 6 методов, ассоциация Room->Coordinates
-- Ship: 0 полей, 1 метод
-- SleeperBus: 0 полей, 1 метод
-- Station: 11 полей, 9 методов, ассоциация Station->Coordinates
-- SUVCar: 1 поле, 1 метод, ассоциация SUVCar->CarAgent
-- Ticket: 10 полей, 8 методов, ассоциация Ticket->Booking
-- TimeClass: 3 поля, 5 методов
-- Train: 0 полей, 1 метод
-- TransportOption: 4 поля, 5 методов
-- TravelAgent: 1 поле, 3 метода, ассоциация TravelAgent->Booking
-- Trip: 4 поля, 2 метода, ассоциация Trip->Hotel, Trip->TransportOption
-- User: 4 поля, 4 метода
-- Visa: 9 полей, 7 методов, ассоциация Visa->Passport, Visa->Date
+- Coupon: 3 поля, 2 метода
+- CreditCard: 4 поля, 2 метода
+- Currency: 8 полей, 8 методов
+- Customer: 2 поля, 1 метод
+- Date: 3 поля, 5 методов
+- DateRange: 1 поле, 2 метода
+- Destination: 10 полей, 8 методов, ассоциация Destination->Coordinates, Destination->City
+- EconomyClassFlight: 1 поле, 2 метода
+- ElectricCar: 1 поле, 2 метода, ассоциация ElectricCar->CarAgent
+- ExpressBus: 1 поле, 2 метода
+- Flight: 1 поле, 2 метода
+- HelicopterTransfer: 1 поле, 2 метода
+- HighSpeedTrain: 1 поле, 2 метода
+- Hotel: 2 поля, 2 метода, ассоциация Hotel->Coordinates
+- Insurance: 10 полей, 9 методов, ассоциация Insurance->Date
+- Itinerary: 9 полей, 8 методов, ассоциация Itinerary->Trip, Itinerary->Date
+- LoyalityProgramm: 1 поле, 2 метода
+- LuxuryBus: 1 поле, 2 метода
+- LuxuryTrain: 1 поле, 2 метода
+- MiniBus: 1 поле, 2 метода
+- Notification: 12 полей, 7 методов, ассоциация Notification->Date, Notification->TimeClass
+- Passport: 9 полей, 6 методов, ассоциация Passport->Date
+- Payment: 10 полей, 6 методов, ассоциация Payment->CreditCard, Payment->Date
+- Port: 11 полей, 8 методов, ассоциация Port->Coordinates
+- Refund: 10 полей, 8 методов, ассоциация Refund->Payment, Refund->Date
+- RegionalTrain: 1 поле, 2 метода
+- Review: 4 поля, 1 метод
+- Room: 4 поля, 5 методов, ассоциация Room->Coordinates
+- Ship: 1 поле, 2 метода
+- SleeperBus: 1 поле, 2 метода
+- Station: 11 полей, 8 методов, ассоциация Station->Coordinates
+- SUVCar: 1 поле, 2 метода, ассоциация SUVCar->CarAgent
+- Ticket: 10 полей, 7 методов, ассоциация Ticket->Booking
+- TimeClass: 3 поля, 4 метода
+- Train: 1 поле, 2 метода
+- TransportOption: 4 поля, 4 метода
+- TravelAgent: 1 поле, 2 метода, ассоциация TravelAgent->Booking
+- Trip: 4 поля, 1 метод, ассоциация Trip->Hotel, Trip->TransportOption
+- User: 4 поля, 3 метода
+- Visa: 9 полей, 6 методов, ассоциация Visa->Passport, Visa->Date
 
-- Классы: 50
-- Поля: 150
-- Методы: 150
+- Классы: 50 
+- Поля: 150   
+- Методы: 150 
 - Ассоциации: 30
 
-**Классы-исключения:**
+Классы-исключения:
 - AddingBonusesException: 0 полей, 1 метод
 - AuthException: 1 поле, 1 метод
 - BookingApplication: 0 полей, 1 метод
