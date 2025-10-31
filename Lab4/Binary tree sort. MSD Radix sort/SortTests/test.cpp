@@ -5,10 +5,10 @@
 #include <algorithm>
 #include <random>
 #include <cstdint>
-#include "D:\Уник\ППОИС\4LABA\task1\task1\sort.h"
-using namespace sortlib; //поудалять ненужные
+#include "D:\Г“Г­ГЁГЄ\ГЏГЏГЋГ€Г‘\4LABA\task1\task1\sort.h"
+using namespace sortlib; 
 
-// Вспомогательный класс для проверки сортировки пользовательских типов
+// Г‚Г±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Г© ГЄГ«Г Г±Г± Г¤Г«Гї ГЇГ°Г®ГўГҐГ°ГЄГЁ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГјГ±ГЄГЁГµ ГІГЁГЇГ®Гў
 struct Student {
     std::string name;
     int score{};
@@ -20,13 +20,13 @@ struct Student {
         return name == other.name && score == other.score;
     }
 };
-// Универсальная проверка совпадения со std::sort
+// Г“Г­ГЁГўГҐГ°Г±Г Г«ГјГ­Г Гї ГЇГ°Г®ГўГҐГ°ГЄГ  Г±Г®ГўГЇГ Г¤ГҐГ­ГЁГї Г±Г® std::sort
 
 template <class Container, class Compare = std::less<>>
 static void expect_sorted_equal(Container c1, Compare comp = {}) {
     Container c2 = c1;
     std::sort(c2.begin(), c2.end(), comp);
-    // Вызываем нашу сортировку и сверяемся со стандартной
+    // Г‚Г»Г§Г»ГўГ ГҐГ¬ Г­Г ГёГі Г±Г®Г°ГІГЁГ°Г®ГўГЄГі ГЁ Г±ГўГҐГ°ГїГҐГ¬Г±Гї Г±Г® Г±ГІГ Г­Г¤Г Г°ГІГ­Г®Г©
     binary_tree_sort(c1, comp);
     EXPECT_EQ(c1, c2);
 }
@@ -51,7 +51,7 @@ TEST(BinaryTreeSort, CustomObjectsVector) {
     std::vector<Student> st = {
         {"Ann", 90}, {"Bob", 75}, {"Carl", 90}, {"Dina", 60}, {"Eve", 75}, {"Ann", 90}
     };
-    // Ожидаем совпадения со std::sort
+    // ГЋГ¦ГЁГ¤Г ГҐГ¬ Г±Г®ГўГЇГ Г¤ГҐГ­ГЁГї Г±Г® std::sort
     expect_sorted_equal(st);
 }
 
@@ -322,7 +322,7 @@ TEST(MSDRadixSort, ReverseSorted) {
 }
 
 TEST(MSDRadixSort, RandomLargeDataset) {
-    // Детеминированный генератор
+    // Г„ГҐГІГҐГ¬ГЁГ­ГЁГ°Г®ГўГ Г­Г­Г»Г© ГЈГҐГ­ГҐГ°Г ГІГ®Г°
     std::mt19937 rng(12345);
     std::uniform_int_distribution<int> dist(-1000000, 1000000);
     std::vector<int> v(5000);
@@ -439,7 +439,7 @@ TEST(MSDRadixSortStrings, IteratorOverload) {
     EXPECT_EQ(vs, expected);
 }
 
-// -------- Сравнение алгоритмов на одном наборе ---------
+// -------- Г‘Г°Г ГўГ­ГҐГ­ГЁГҐ Г Г«ГЈГ®Г°ГЁГІГ¬Г®Гў Г­Г  Г®Г¤Г­Г®Г¬ Г­Г ГЎГ®Г°ГҐ ---------
 
 TEST(CompareAlgorithms, IntsSameAsStdSort) {
     std::vector<int> v = { 5,4,3,2,1,1,2,3,4,5 };
@@ -451,7 +451,7 @@ TEST(CompareAlgorithms, IntsSameAsStdSort) {
     EXPECT_EQ(v2, v);
 }
 
-// Дополнительные граничные случаи
+// Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГЈГ°Г Г­ГЁГ·Г­Г»ГҐ Г±Г«ГіГ·Г ГЁ
 
 TEST(BinaryTreeSort, LargeDataset) {
     std::mt19937 rng(54321);
@@ -558,7 +558,7 @@ TEST(MSDRadixSort, NegativeLargeNumbers) {
     EXPECT_EQ(v, expected);
 }
 
-// Дополнительные тесты для повышения покрытия до 85%+
+// Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГІГҐГ±ГІГ» Г¤Г«Гї ГЇГ®ГўГ»ГёГҐГ­ГЁГї ГЇГ®ГЄГ°Г»ГІГЁГї Г¤Г® 85%+
 
 TEST(MSDRadixSort, IteratorOverloadInt) {
     std::vector<int> v = { 99, 88, 77, 66, 55 };
@@ -760,7 +760,7 @@ TEST(MSDRadixSortStrings, MediumSizeDataset) {
     EXPECT_EQ(vs, expected);
 }
 
-// Дополнительные тесты для покрытия всех явных инстанцирований
+// Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГІГҐГ±ГІГ» Г¤Г«Гї ГЇГ®ГЄГ°Г»ГІГЁГї ГўГ±ГҐГµ ГїГўГ­Г»Гµ ГЁГ­Г±ГІГ Г­Г¶ГЁГ°Г®ГўГ Г­ГЁГ©
 
 TEST(BinaryTreeSort, IteratorLong) {
     std::vector<long> v = { 500L, 300L, 700L, 100L, 900L };
@@ -912,7 +912,7 @@ TEST(BinaryTreeSort, CArrayWithComparator) {
     EXPECT_TRUE(std::equal(expected.begin(), expected.end(), arr));
 }
 
-// Тесты для покрытия методов BinarySearchTree
+// Г’ГҐГ±ГІГ» Г¤Г«Гї ГЇГ®ГЄГ°Г»ГІГЁГї Г¬ГҐГІГ®Г¤Г®Гў BinarySearchTree
 
 TEST(BinaryTreeSort, ManyDuplicatesTree) {
     std::vector<int> v = { 5, 5, 5, 3, 3, 7, 7, 5, 3 };
@@ -945,7 +945,7 @@ TEST(BinaryTreeSort, BalancedTree) {
     EXPECT_EQ(v, expected);
 }
 
-// Дополнительные тесты для увеличения покрытия рекурсивных путей
+// Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГІГҐГ±ГІГ» Г¤Г«Гї ГіГўГҐГ«ГЁГ·ГҐГ­ГЁГї ГЇГ®ГЄГ°Г»ГІГЁГї Г°ГҐГЄГіГ°Г±ГЁГўГ­Г»Гµ ГЇГіГІГҐГ©
 
 TEST(MSDRadixSort, DeepRecursion) {
     std::vector<int> v;
@@ -995,11 +995,11 @@ TEST(MSDRadixSort, UnsignedByteRange) {
     EXPECT_EQ(v, expected);
 }
 
-// Дополнительные тесты для покрытия всех веток рекурсии
+// Г„Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГІГҐГ±ГІГ» Г¤Г«Гї ГЇГ®ГЄГ°Г»ГІГЁГї ГўГ±ГҐГµ ГўГҐГІГ®ГЄ Г°ГҐГЄГіГ°Г±ГЁГЁ
 
 TEST(MSDRadixSort, MultiByteRecursion) {
     std::vector<int> v;
-    // Создаем числа с разными байтами для глубокой рекурсии
+    // Г‘Г®Г§Г¤Г ГҐГ¬ Г·ГЁГ±Г«Г  Г± Г°Г Г§Г­Г»Г¬ГЁ ГЎГ Г©ГІГ Г¬ГЁ Г¤Г«Гї ГЈГ«ГіГЎГ®ГЄГ®Г© Г°ГҐГЄГіГ°Г±ГЁГЁ
     for (int i = 0; i < 256; ++i) {
         v.push_back(i << 24);
         v.push_back(i << 16);
@@ -1168,3 +1168,4 @@ int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
+
