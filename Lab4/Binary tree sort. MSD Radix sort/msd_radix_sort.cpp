@@ -1,11 +1,6 @@
 #include "msd_radix_sort.h"
 
 namespace sortlib {
-   
-
-    // Явные инстанцирования
-
-    // Целые
     template void msd_radix_sort(std::vector<int>::iterator, std::vector<int>::iterator);
     template void msd_radix_sort(std::vector<long>::iterator, std::vector<long>::iterator);
     template void msd_radix_sort(std::vector<long long>::iterator, std::vector<long long>::iterator);
@@ -21,14 +16,13 @@ namespace sortlib {
     template void msd_radix_sort(long*, long*);
     template void msd_radix_sort(unsigned*, unsigned*);
 
-    // Строки
     template void msd_radix_sort(std::vector<std::string>::iterator, std::vector<std::string>::iterator);
     template void msd_radix_sort(std::string*, std::string*);
 
-    // Контейнеры
     template void msd_radix_sort(std::vector<int>&);
     template void msd_radix_sort(std::vector<long>&);
     template void msd_radix_sort(std::vector<unsigned>&);
     template void msd_radix_sort(std::vector<std::string>&);
+
 
 } 
