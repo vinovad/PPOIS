@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "binary_tree_sort.h" 
-#include "msd_radix_sort.h"     
+#include "sort.h" 
 
 using namespace sortlib;
 class Userclass {
@@ -99,3 +98,4 @@ int main() {
     return 0;
 
 }
+
