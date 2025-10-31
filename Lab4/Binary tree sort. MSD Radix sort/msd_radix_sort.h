@@ -44,7 +44,7 @@ namespace sortlib {
     template <class CharT, class Traits, class Alloc>
     struct is_basic_string<std::basic_string<CharT, Traits, Alloc>> : std::true_type {};
 
-    // Ядро MSD для целых
+    // ГџГ¤Г°Г® MSD Г¤Г«Гї Г¶ГҐГ«Г»Гµ
     template <class RandomIt, class Keyer>
     void msd_radix_sort_integral_impl(RandomIt first, RandomIt last, int byteIndex,
         std::vector<typename std::iterator_traits<RandomIt>::value_type>& buffer,
@@ -89,8 +89,6 @@ namespace sortlib {
             }
         }
     }
-
-    // Публичный API: целые числа
     template <class RandomIt>
     std::enable_if_t<std::is_integral_v<typename std::iterator_traits<RandomIt>::value_type>, void>
         msd_radix_sort(RandomIt first, RandomIt last) {
@@ -117,7 +115,6 @@ namespace sortlib {
         msd_radix_sort(arr, arr + N);
     }
 
-    // Публичный API: строки (только std::string с char)
     template <class RandomIt>
     std::enable_if_t<is_basic_string<typename std::iterator_traits<RandomIt>::value_type>::value&&
         std::is_same_v<typename std::iterator_traits<RandomIt>::value_type::value_type, char>, void>
@@ -173,5 +170,6 @@ namespace sortlib {
     void msd_radix_sort(std::string(&arr)[N]) {
         msd_radix_sort(arr, arr + N);
     }
+
 
 } 
