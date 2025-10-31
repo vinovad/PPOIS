@@ -64,14 +64,12 @@ namespace sortlib {
             (void)inorder_impl(root_, out);
         }
     };
-
-    // Сортировка по итераторам
     template <class RandomIt, class Compare = std::less<>>
     void binary_tree_sort(RandomIt first, RandomIt last, Compare comp = {}) {
         using T = typename std::iterator_traits<RandomIt>::value_type;
         using Cat = typename std::iterator_traits<RandomIt>::iterator_category;
         static_assert(std::is_base_of_v<std::random_access_iterator_tag, Cat>,
-            "binary_tree_sort требует итераторы произвольного доступа");
+            "binary_tree_sort ГІГ°ГҐГЎГіГҐГІ ГЁГІГҐГ°Г ГІГ®Г°Г» ГЇГ°Г®ГЁГ§ГўГ®Г«ГјГ­Г®ГЈГ® Г¤Г®Г±ГІГіГЇГ ");
 
         BinarySearchTree<T, Compare> bst(std::move(comp));
         for (auto it = first; it != last; ++it) {
@@ -80,13 +78,12 @@ namespace sortlib {
         bst.inorder(first);
     }
 
-    // Перегрузка для контейнера
     template <class Container, class Compare = std::less<>>
     void binary_tree_sort(Container& c, Compare comp = {}) {
         binary_tree_sort(std::begin(c), std::end(c), std::move(comp));
     }
 
-    // Перегрузка для C-массива
+    // ГЏГҐГ°ГҐГЈГ°ГіГ§ГЄГ  Г¤Г«Гї C-Г¬Г Г±Г±ГЁГўГ 
     template <class T, std::size_t N, class Compare = std::less<>>
     void binary_tree_sort(T(&arr)[N], Compare comp = Compare()) {
         binary_tree_sort(arr, arr + N, std::move(comp));
