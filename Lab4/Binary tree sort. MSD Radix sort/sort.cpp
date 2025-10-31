@@ -5,7 +5,6 @@
 #include "msd_radix_sort.h"     
 
 using namespace sortlib;
-// Пользовательский класс для демонстрации
 class Userclass {
 public:
     std::string name;
@@ -19,87 +18,84 @@ public:
     }
 
     friend std::ostream& operator<<(std::ostream& os, const Userclass& s) {
-        os << s.name << " (возраст: " << s.age << ", оценка: " << s.grade << ")";
+        os << s.name << " (ГўГ®Г§Г°Г Г±ГІ: " << s.age << ", Г®Г¶ГҐГ­ГЄГ : " << s.grade << ")";
         return os;
     }
 };
 
 int main() {
     setlocale(0, "rus");
-    // ===== Тестирование сортировки бинарным деревом =====
-    // С целыми числами
+    // ===== Г’ГҐГ±ГІГЁГ°Г®ГўГ Г­ГЁГҐ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ ГЎГЁГ­Г Г°Г­Г»Г¬ Г¤ГҐГ°ГҐГўГ®Г¬ =====
     std::vector<int> numbers = { 5, 2, 8, 1, 9, 3, 7, 4, 6 };
-    std::cout << "До BST сортировки: ";
+    std::cout << "Г„Г® BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ: ";
     for (int n : numbers) std::cout << n << " ";
     std::cout << std::endl;
     sortlib::binary_tree_sort(numbers);
-    std::cout << "После BST сортировки: ";
+    std::cout << "ГЏГ®Г±Г«ГҐ BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ: ";
     for (int n : numbers) std::cout << n << " ";
     std::cout << std::endl;
-
-    // С строками
+    
     std::vector<std::string> words = { "banana", "apple", "cherry", "date" };
-    std::cout << "\nДо BST сортировки строк: ";
+    std::cout << "\nГ„Г® BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГ°Г®ГЄ: ";
     for (const auto& w : words) std::cout << w << " ";
     std::cout << std::endl;
     sortlib::binary_tree_sort(words);
-    std::cout << "После BST сортировки строк: ";
+    std::cout << "ГЏГ®Г±Г«ГҐ BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГ°Г®ГЄ: ";
     for (const auto& w : words) std::cout << w << " ";
     std::cout << std::endl;
 
-    // С C-массивом
     int arr[] = { 10, 5, 8, 1, 7 };
-    std::cout << "\nДо BST сортировки массива: ";
+    std::cout << "\nГ„Г® BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г¬Г Г±Г±ГЁГўГ : ";
     for (int i = 0; i < 5; i++) std::cout << arr[i] << " ";
     std::cout << std::endl;
     sortlib::binary_tree_sort(arr);
-    std::cout << "\nПосле BST сортировки массива: ";
+    std::cout << "\nГЏГ®Г±Г«ГҐ BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г¬Г Г±Г±ГЁГўГ : ";
     for (int i = 0; i < 5; i++) std::cout << arr[i] << " ";
     std::cout << std::endl;
 
-    // ===== Тестирование MSD поразрядной сортировки =====
-    // С целыми числами
+    // ===== Г’ГҐГ±ГІГЁГ°Г®ГўГ Г­ГЁГҐ MSD ГЇГ®Г°Г Г§Г°ГїГ¤Г­Г®Г© Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ =====
+   
     std::vector<int> radix_numbers = { 170, 45, 75, 90, 2, 802, 24, 66 };
-    std::cout << "\n\nДо MSD сортировки: ";
+    std::cout << "\n\nГ„Г® MSD Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ: ";
     for (int n : radix_numbers) std::cout << n << " ";
     std::cout << std::endl;
     sortlib::msd_radix_sort(radix_numbers);
-    std::cout << "После MSD сортировки: ";
+    std::cout << "ГЏГ®Г±Г«ГҐ MSD Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ: ";
     for (int n : radix_numbers) std::cout << n << " ";
     std::cout << std::endl;
 
-    // Со строками
     std::vector<std::string> radix_words = { "word", "test", "hello", "world", "abc", "abcd" };
-    std::cout << "\nДо MSD сортировки строк: ";
+    std::cout << "\nГ„Г® MSD Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГ°Г®ГЄ: ";
     for (const auto& w : radix_words) std::cout << w << " ";
     std::cout << std::endl;
     sortlib::msd_radix_sort(radix_words);
-    std::cout << "После MSD сортировки строк: ";
+    std::cout << "ГЏГ®Г±Г«ГҐ MSD Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГ°Г®ГЄ: ";
     for (const auto& w : radix_words) std::cout << w << " ";
     std::cout << std::endl;
 
-    // ===== Тест с пользовательским классом =====
+    // ===== Г’ГҐГ±ГІ Г± ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«ГјГ±ГЄГЁГ¬ ГЄГ«Г Г±Г±Г®Г¬ =====
     std::vector<Userclass> students = {
-        {"Анна", 20, 8.5},
-        {"Дана", 18, 6.8},
-        {"Мария", 4, 7.9},
-        {"Юля", 30, 5.2},
-        {"Ксюша", 21, 9.5}
+        {"ГЂГ­Г­Г ", 20, 8.5},
+        {"Г„Г Г­Г ", 18, 6.8},
+        {"ГЊГ Г°ГЁГї", 4, 7.9},
+        {"ГћГ«Гї", 30, 5.2},
+        {"ГЉГ±ГѕГёГ ", 21, 9.5}
     };
 
-    std::cout << "\nДо BST сортировки студентов:\n";
+    std::cout << "\nГ„Г® BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГіГ¤ГҐГ­ГІГ®Гў:\n";
     for (const auto& s : students) std::cout << "  " << s << std::endl;
 
     sortlib::binary_tree_sort(students);
-    std::cout << "\nПосле BST сортировки студентов (по оценке):\n";
+    std::cout << "\nГЏГ®Г±Г«ГҐ BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГіГ¤ГҐГ­ГІГ®Гў (ГЇГ® Г®Г¶ГҐГ­ГЄГҐ):\n";
     for (const auto& s : students) std::cout << "  " << s << std::endl;
 
     auto ageComparator = [](const Userclass& a, const Userclass& b) {
         return a.age < b.age;
         };
     sortlib::binary_tree_sort(students, ageComparator);
-    std::cout << "\nПосле BST сортировки студентов (по возрасту):\n";
+    std::cout << "\nГЏГ®Г±Г«ГҐ BST Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ Г±ГІГіГ¤ГҐГ­ГІГ®Гў (ГЇГ® ГўГ®Г§Г°Г Г±ГІГі):\n";
     for (const auto& s : students) std::cout << "  " << s << std::endl;
 
     return 0;
+
 }
