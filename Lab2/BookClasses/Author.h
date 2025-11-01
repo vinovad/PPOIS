@@ -1,6 +1,6 @@
 /**
  * @file Author.h
- * @brief Класс для работы с автором книги
+ * @brief РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р°РІС‚РѕСЂРѕРј РєРЅРёРіРё
  */
 
 #ifndef AUTHOR_H
@@ -9,81 +9,88 @@
 #include "Country.h"
 #include "Language.h"
 #include <string>
+#include <vector>
+
 using namespace std;
 
 /**
  * @class Author
- * @brief Представляет автора книги с дополнительной информацией
+ * @brief РџСЂРµРґСЃС‚Р°РІР»СЏРµС‚ Р°РІС‚РѕСЂР° РєРЅРёРіРё СЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№
  */
 class Author {
 private:
-    string name;                    ///< Имя автора
-    string birth_year;              ///< Год рождения
-    int books_written;              ///< Количество написанных книг
-    Country associatedCountry;      ///< Ассоциированная страна
-    Language associatedLanguage;    ///< Ассоциированный язык
-    string pseudonym;               ///< Псевдоним
-    string nationality;             ///< Национальность
-    string awards;                  ///< Награды
-    string education;               ///< Образование
-
+    string name;
+    string birth_year;
+    int books_written;
+    Country associatedCountry;
+    Language associatedLanguage;
+    string pseudonym;
+    string nationality;
+    string awards;
+    string education;
+    string death_year;
+    string biography;
+    string website;
+    string social_media;
+    vector<string> genres;
 public:
     /**
-     * @brief Конструктор с параметрами
-     * @param n Имя автора
-     * @param by Год рождения
-     * @param bw Количество написанных книг
-     * @param country Ассоциированная страна
-     * @param language Ассоциированный язык
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+     * @param n РРјСЏ Р°РІС‚РѕСЂР°
+     * @param by Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ
+     * @param bw РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР°РїРёСЃР°РЅРЅС‹С… РєРЅРёРі
+     * @param country РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚СЂР°РЅР°
+     * @param language РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅС‹Р№ СЏР·С‹Рє
      */
     Author(const string& n, const string& by, int bw, const Country& country, const Language& language);
 
     /**
-     * @brief Конструктор по умолчанию
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
      */
     Author();
 
     /**
-     * @brief Получить имя автора
-     * @return Имя автора
+     * @brief РџРѕР»СѓС‡РёС‚СЊ РёРјСЏ Р°РІС‚РѕСЂР°
+     * @return РРјСЏ Р°РІС‚РѕСЂР°
      */
     string get_Author();
 
     /**
-     * @brief Получить год рождения
-     * @return Год рождения
+     * @brief РџРѕР»СѓС‡РёС‚СЊ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ
+     * @return Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ
      */
     string get_birth();
 
     /**
-     * @brief Получить количество книг
-     * @return Количество написанных книг
+     * @brief РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРЅРёРі
+     * @return РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР°РїРёСЃР°РЅРЅС‹С… РєРЅРёРі
      */
     int get_books();
 
     /**
-     * @brief Получить ассоциированную страну
-     * @return Название страны
+     * @brief РџРѕР»СѓС‡РёС‚СЊ Р°СЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅСѓСЋ СЃС‚СЂР°РЅСѓ
+     * @return РќР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅС‹
      */
     string get_AssociatedCountry();
 
     /**
-     * @brief Получить ассоциированный язык
-     * @return Язык
+     * @brief РџРѕР»СѓС‡РёС‚СЊ Р°СЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅС‹Р№ СЏР·С‹Рє
+     * @return РЇР·С‹Рє
      */
     string get_AssociatedLanguage();
 
     /**
-     * @brief Установить год рождения
-     * @param by Год рождения
+     * @brief РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ
+     * @param by Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ
      */
     void set_birth(int by);
 
     /**
-     * @brief Установить количество книг
-     * @param bw Количество написанных книг
+     * @brief РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРЅРёРі
+     * @param bw РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР°РїРёСЃР°РЅРЅС‹С… РєРЅРёРі
      */
     void set_books(int bw);
 };
+
 
 #endif
