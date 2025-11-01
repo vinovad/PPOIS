@@ -1,6 +1,6 @@
 /**
  * @file Shipping.h
- * @brief Класс для работы с информацией о доставке книг
+ * @brief РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ Рѕ РґРѕСЃС‚Р°РІРєРµ РєРЅРёРі
  */
 
 #ifndef SHIPPING_H
@@ -12,57 +12,62 @@ using namespace std;
 
 /**
  * @class Shipping
- * @brief Представляет информацию о доступности доставки для пользователя
+ * @brief РџСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґРѕСЃС‚Р°РІРєРё РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  */
 class Shipping {
 private:
-    bool has_shipping;          ///< Наличие доставки
-    User associatedUser;        ///< Ассоциированный пользователь
-    string shipping_type;       ///< Тип доставки
-    double shipping_cost;       ///< Стоимость доставки
+    bool has_shipping;
+    User associatedUser;
+    string shipping_type;
+    double shipping_cost;
+    string tracking_number;
+    string carrier;
+    string estimated_delivery_date;
+    string shipping_status;
 
 public:
     /**
-     * @brief Конструктор с параметрами
-     * @param shipping Статус доставки
-     * @param user Ассоциированный пользователь
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+     * @param shipping РЎС‚Р°С‚СѓСЃ РґРѕСЃС‚Р°РІРєРё
+     * @param user РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
      */
     Shipping(bool shipping, const User& user);
 
     /**
-     * @brief Конструктор по умолчанию
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
      */
     Shipping();
 
     /**
-     * @brief Проверить наличие доставки
-     * @return true если доставка доступна, false в противном случае
+     * @brief РџСЂРѕРІРµСЂРёС‚СЊ РЅР°Р»РёС‡РёРµ РґРѕСЃС‚Р°РІРєРё
+     * @return true РµСЃР»Рё РґРѕСЃС‚Р°РІРєР° РґРѕСЃС‚СѓРїРЅР°, false РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ
      */
     bool has_shipping_available();
 
     /**
-     * @brief Получить имя ассоциированного пользователя
-     * @return Имя пользователя
+     * @brief РџРѕР»СѓС‡РёС‚СЊ РёРјСЏ Р°СЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+     * @return РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
      */
     string get_AssociatedUserName();
 
     /**
-     * @brief Получить тип доставки
-     * @return Тип доставки
+     * @brief РџРѕР»СѓС‡РёС‚СЊ С‚РёРї РґРѕСЃС‚Р°РІРєРё
+     * @return РўРёРї РґРѕСЃС‚Р°РІРєРё
      */
     string get_shipping_type();
 
     /**
-     * @brief Получить стоимость доставки
-     * @return Стоимость доставки
+     * @brief РџРѕР»СѓС‡РёС‚СЊ СЃС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё
+     * @return РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё
      */
     double get_shipping_cost();
 
     /**
-     * @brief Установить статус доставки
-     * @param shipping Новый статус доставки
+     * @brief РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃС‚Р°С‚СѓСЃ РґРѕСЃС‚Р°РІРєРё
+     * @param shipping РќРѕРІС‹Р№ СЃС‚Р°С‚СѓСЃ РґРѕСЃС‚Р°РІРєРё
      */
     void set_shipping_status(bool shipping);
 };
+
 
 #endif
