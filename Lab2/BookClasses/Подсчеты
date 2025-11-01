@@ -1,67 +1,159 @@
-- Author: 9 полей, 7 методов, ассоциация Author->Country, Author->Language
-- AgeRestriction: 3 поля, 6 методов  , ассоциация AgeRestriction->TargetAudience,AgeRestriction->User 
-- ArrivalDate: 3 поля, 1 метод
-- AssistantName: 4 поля, 2 метода,ассоциация AssistantName->WorkExperience
-- Audiobook: 1 поле, 1 метод
-- Book: наследует функциональность, 15 методов
-- BookArrivalNotification: 6 полей, 5 методов,ассоциация BookArrivalNotification->ArrivalDate
-- BookCondition: 3 поля, 1 метод
-- BookFormat: 2 поля, 2 метода,ассоциация BookFormat->PageCount
-- BookSeries: 2 поля, 1 метод
-- BookTitle: 3 поля, 2 метода
-- BookVolumeCount: 2 поля, 2 метода, ассоциация BookVolumeCount->BookSeries
-- BookWeight: 4 поля, 2 метода, ассоциация BookWeight->BookFormat
-- Country: 1 поле, 1 метод
-- Cover_Format: 2 поля, 3 метода,ассоциация Cover_Format->Publisher
-- CustomerArrivalTime: 5 полей, 3 метода
-- EducationLevel: 1 поле, 1 метод
-- ElectronicPDF: 2 поля, 2 метода, ассоциация ElectronicPDF->Audiobook
-- ExportCountry: 2 поля, 3 метода, ассоциация ExportCountry->Prohibited
-- Genre: 2 поля, 3 метода, ассоциация Genre->Tag
-- HollLocation: 2 поля, 2 метода, ассоциация HollLocation->SectionLocation
-- ImportCountry: 2 поля, 3 метода, ассоциация ImportCountry->Prohibited
-- Language: 1 поле, 2 метода
-- LimitedSeries: 2 поля, 2 метода,ассоциация LimitedSeries->BookVolumeCount
-- LoyaltyProgram: 3 поля, 7 методов,ассоциация LoyaltyProgram->User
-- MainCharacter: 2 поля, 3 метода,  ассоциация MainCharacter->BookVolumeCount
-- NumberOfBooks: 1 поле, 1 метод
-- NumberOfPeople: 2 поля, 3 метода,ассоциация NumberOfPeople->User
-- NumberOfReviews: 4 поля, 2 метода, ассоциация NumberOfReviews->Reviews
-- NumberOfTranslations: 2 поля, 2 метода, ассоциация NumberOfTranslations->Language
-- PageCount: 3 поля, 3 метода
-- PersonalOpinion: 4 поля, 2 метода,ассоциация PersonalOpinion->NumberOfPeople
-- PositionLocation: 1 поле, 1 метод
-- Price: 5 полей, 4 метода, ассоциация Price->Sale
-- Prohibited: 2 поля, 2 метода,ассоциация Prohibited->Country
-- Publisher: 4 поля, 2 метода
-- PurchasedBook: 4 поля, 5 метода
-- Rating: 3 поля, 2 метода
-- Reviews: 3 поля, 1 метод
-- Sale: 4 поля, 2 метода
-- SectionLocation: 2 поля, 2 метода,ассоциация SectionLocation->ShelfLocation
-- ShelfLocation: 2 поля, 2 метода,ассоциация ShelfLocation->PositionLocation
-- Shipping: 4 поля, 5 методов
-- Supplier: 3 поля, 4 метода,ассоциация Supplier->ImportCountry, Supplier->BookCondition
-- Tag: 1 поле, 2 метода
-- TargetAudience: 2 поля, 2 метода,ассоциация TargetAudience->EducationLevel
-- Translator: 2 поля, 2 метода,ассоциация Translator->NumberOfTranslations
-- User: 7 полей, 4 метода
-- WorkExperience: 3 поля, 1 метод
-- YearOfManufacture: 1 поле, 3 метода
+ ОТЧЕТ ПО СИСТЕМЕ УПРАВЛЕНИЯ КНИГАМИ
+(на основе анализа всех предоставленных файлов)
 
-- Классы: 50 
-- Поля: 127   
-- Методы: 138 
-- Accоциации: 30
+ ОСНОВНЫЕ КЛАССЫ (50):
 
-Классы-исключения:
-Классы: 12
-Поля: 0
-Уникальные поведения: 12
+Author: 9 полей, 7 методов  
+Ассоциации: Author→Country, Author→Language
 
+AgeRestriction: 3 поля, 6 методов  
+Ассоциации: AgeRestriction→TargetAudience, AgeRestriction→User
 
-ИТОГ:
-- Классы: 50 + 12 исключений
-- Поля: 127  
-- Методы: 150 
-- Accоциации: 30
+ArrivalDate: 3 поля, 1 метод
+
+AssistantName: 4 поля, 2 метода  
+Ассоциации: AssistantName→WorkExperience
+
+Audiobook: 1 поле, 1 метод
+
+Book: 0 полей (наследует), 16 методов  
+Наследует функциональность от всех классов
+
+BookArrivalNotification: 6 полей, 5 методов  
+Ассоциации: BookArrivalNotification→ArrivalDate
+
+BookCondition: 3 поля, 1 метод
+
+BookFormat: 2 поля, 2 метода  
+Ассоциации: BookFormat→PageCount
+
+BookSeries: 2 поля, 1 метод
+
+BookTitle: 3 поля, 2 метода
+
+BookVolumeCount: 2 поля, 2 метода  
+Ассоциации: BookVolumeCount→BookSeries
+
+BookWeight: 4 поля, 2 метода  
+Ассоциации: BookWeight→BookFormat
+
+Country: 1 поле, 1 метод
+
+Cover_Format: 2 поля, 3 метода  
+Ассоциации: Cover_Format→Publisher
+
+CustomerArrivalTime: 5 полей, 3 метода
+
+EducationLevel: 1 поле, 1 метод
+
+ElectronicPDF: 2 поля, 2 метода  
+Ассоциации: ElectronicPDF→Audiobook
+
+ExportCountry: 2 поля, 3 метода  
+Ассоциации: ExportCountry→Prohibited
+
+Genre: 2 поля, 3 метода  
+Ассоциации: Genre→Tag
+
+HollLocation: 2 поля, 2 метода  
+Ассоциации: HollLocation→SectionLocation
+
+ImportCountry: 2 поля, 3 метода  
+Ассоциации: ImportCountry→Prohibited
+
+Language: 1 поле, 2 метода
+
+LimitedSeries: 2 поля, 2 метода  
+Ассоциации: LimitedSeries→BookVolumeCount
+
+LoyaltyProgram: 3 поля, 7 методов  
+Ассоциации: LoyaltyProgram→User
+
+MainCharacter: 2 поля, 3 метода  
+Ассоциации: MainCharacter→BookVolumeCount
+
+NumberOfBooks: 1 поле, 1 метод
+
+NumberOfPeople: 2 поля, 3 метода  
+Ассоциации: NumberOfPeople→User
+
+NumberOfReviews: 4 поля, 2 метода  
+Ассоциации: NumberOfReviews→Reviews
+
+NumberOfTranslations: 2 поля, 2 метода  
+Ассоциации: NumberOfTranslations→Language
+
+PageCount: 3 поля, 3 метода
+
+PersonalOpinion: 4 поля, 2 метода  
+Ассоциации: PersonalOpinion→NumberOfPeople
+
+PositionLocation: 1 поле, 1 метод
+
+Price: 5 полей, 4 метода  
+Ассоциации: Price→Sale
+
+Prohibited: 2 поля, 2 метода  
+Ассоциации: Prohibited→Country
+
+Publisher: 4 поля, 2 метода
+
+PurchasedBook: 4 поля, 5 методов
+
+Rating: 3 поля, 2 метода
+
+Reviews: 3 поля, 1 метод
+
+Sale: 2 поля, 2 метода
+
+SectionLocation: 2 поля, 2 метода  
+Ассоциации: SectionLocation→ShelfLocation
+
+ShelfLocation: 2 поля, 2 метода  
+Ассоциации: ShelfLocation→PositionLocation
+
+Shipping: 4 поля, 5 методов
+
+Supplier: 3 поля, 4 метода  
+Ассоциации: Supplier→ImportCountry, Supplier→BookCondition
+
+Tag: 1 поле, 2 метода
+
+TargetAudience: 2 поля, 2 метода  
+Ассоциации: TargetAudience→EducationLevel
+
+Translator: 2 поля, 2 метода  
+Ассоциации: Translator→NumberOfTranslations
+
+User: 7 полей, 4 метода
+
+WorkExperience: 3 поля, 1 метод
+
+YearOfManufacture: 1 поле, 3 метода
+
+КЛАССЫ-ИСКЛЮЧЕНИЯ (12):
+- AgeRestrictionException
+- AuthorBirthException  
+- AuthorBooksException
+- BookTitleException
+- CoverFormatException
+- GenreException
+- LanguageException
+- PageCountException
+- PublisherException
+- RatingException
+- TagException
+- YearException
+
+Характеристики исключений:
+- Классы: 12
+- Поля: 0
+- Уникальные поведения: 12
+
+ ИТОГОВАЯ СТАТИСТИКА:
+
+ОСНОВНЫЕ ПОКАЗАТЕЛИ:
+- Классы: 50 основных + 12 исключений = 62 класса
+- Поля: 170 полей 
+- Методы: 138 методов основных + 12 исключений = 150 уникальных поведений
+- Ассоциации: 30 ассоциаций
