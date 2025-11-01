@@ -3,7 +3,7 @@
 
  ОСНОВНЫЕ КЛАССЫ (50):
 
-Author: 9 полей, 7 методов  
+Author: 14 полей, 7 методов  
 Ассоциации: Author→Country, Author→Language
 
 AgeRestriction: 3 поля, 6 методов  
@@ -19,7 +19,7 @@ Audiobook: 1 поле, 1 метод
 Book: 0 полей (наследует), 16 методов  
 Наследует функциональность от всех классов
 
-BookArrivalNotification: 6 полей, 5 методов  
+BookArrivalNotification: 9 полей, 5 методов  
 Ассоциации: BookArrivalNotification→ArrivalDate
 
 BookCondition: 3 поля, 1 метод
@@ -66,7 +66,7 @@ Language: 1 поле, 2 метода
 LimitedSeries: 2 поля, 2 метода  
 Ассоциации: LimitedSeries→BookVolumeCount
 
-LoyaltyProgram: 3 поля, 7 методов  
+LoyaltyProgram: 6 поля, 7 методов  
 Ассоциации: LoyaltyProgram→User
 
 MainCharacter: 2 поля, 3 метода  
@@ -112,7 +112,7 @@ SectionLocation: 2 поля, 2 метода
 ShelfLocation: 2 поля, 2 метода  
 Ассоциации: ShelfLocation→PositionLocation
 
-Shipping: 4 поля, 5 методов
+Shipping: 8 поля, 5 методов
 
 Supplier: 3 поля, 4 метода  
 Ассоциации: Supplier→ImportCountry, Supplier→BookCondition
@@ -154,6 +154,6 @@ YearOfManufacture: 1 поле, 3 метода
 
 ОСНОВНЫЕ ПОКАЗАТЕЛИ:
 - Классы: 50 основных + 12 исключений = 62 класса
-- Поля: 170 полей 
-- Методы: 138 методов основных + 12 исключений = 150 уникальных поведений
+- Поля: 151 полей 
+- Методы: 140 методов основных + 12 исключений = 152 уникальных поведений
 - Ассоциации: 30 ассоциаций
