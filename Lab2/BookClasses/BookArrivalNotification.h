@@ -1,6 +1,6 @@
 /**
  * @file BookArrivalNotification.h
- * @brief Класс для работы с уведомлениями о поступлении книг
+ * @brief РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ СѓРІРµРґРѕРјР»РµРЅРёСЏРјРё Рѕ РїРѕСЃС‚СѓРїР»РµРЅРёРё РєРЅРёРі
  */
 
 #ifndef BOOKARRIVALNOTIFICATION_H
@@ -12,55 +12,58 @@ using namespace std;
 
 /**
  * @class BookArrivalNotification
- * @brief Представляет уведомление о поступлении книги
+ * @brief РџСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СѓРІРµРґРѕРјР»РµРЅРёРµ Рѕ РїРѕСЃС‚СѓРїР»РµРЅРёРё РєРЅРёРіРё
  */
 class BookArrivalNotification {
 private:
-    string book_title;              ///< Название книги
-    string notification_message;    ///< Текст уведомления
-    bool is_sent;                   ///< Статус отправки
-    ArrivalDate associatedArrivalDate; ///< Ассоциированная дата поступления
-    string notification_type;       ///< Тип уведомления
-    int priority_level;             ///< Уровень приоритета
+    string book_title;
+    string notification_message;
+    bool is_sent;
+    ArrivalDate associatedArrivalDate;
+    string notification_type;
+    int priority_level;
+    string notification_channel;
+    int retry_count;
+    string status;
 
 public:
     /**
-     * @brief Конструктор с параметрами
-     * @param title Название книги
-     * @param arrivalDate Ассоциированная дата поступления
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+     * @param title РќР°Р·РІР°РЅРёРµ РєРЅРёРіРё
+     * @param arrivalDate РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅР°СЏ РґР°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ
      */
     BookArrivalNotification(const string& title, const ArrivalDate& arrivalDate);
 
     /**
-     * @brief Конструктор по умолчанию
+     * @brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
      */
     BookArrivalNotification();
 
     /**
-     * @brief Отправить уведомление
+     * @brief РћС‚РїСЂР°РІРёС‚СЊ СѓРІРµРґРѕРјР»РµРЅРёРµ
      */
     void send_notification();
 
     /**
-     * @brief Получить название книги
-     * @return Название книги
+     * @brief РџРѕР»СѓС‡РёС‚СЊ РЅР°Р·РІР°РЅРёРµ РєРЅРёРіРё
+     * @return РќР°Р·РІР°РЅРёРµ РєРЅРёРіРё
      */
     string get_book_title();
 
     /**
-     * @brief Проверить, отправлено ли уведомление
-     * @return true если уведомление отправлено, false в противном случае
+     * @brief РџСЂРѕРІРµСЂРёС‚СЊ, РѕС‚РїСЂР°РІР»РµРЅРѕ Р»Рё СѓРІРµРґРѕРјР»РµРЅРёРµ
+     * @return true РµСЃР»Рё СѓРІРµРґРѕРјР»РµРЅРёРµ РѕС‚РїСЂР°РІР»РµРЅРѕ, false РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ
      */
     bool is_notification_sent();
 
     /**
-     * @brief Получить ассоциированную дату поступления
-     * @return Дата поступления
+     * @brief РџРѕР»СѓС‡РёС‚СЊ Р°СЃСЃРѕС†РёРёСЂРѕРІР°РЅРЅСѓСЋ РґР°С‚Сѓ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ
+     * @return Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ
      */
     string get_AssociatedArrivalDate();
 
     /**
-     * @brief Сбросить статус уведомления
+     * @brief РЎР±СЂРѕСЃРёС‚СЊ СЃС‚Р°С‚СѓСЃ СѓРІРµРґРѕРјР»РµРЅРёСЏ
      */
     void reset_notification();
 };
