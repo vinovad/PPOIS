@@ -3,7 +3,6 @@
 #include "D:\Уник\ППОИС\1LABA\Set\MultiSet\MultiSet\MultiSet.cpp"
 
 using namespace std;
-//тестируем управление счетчиком элементов
 TEST(MultiSetElementTest, CountManipulation) {
     MultiSetElement elem("a", 3, false);
     elem.setCount(4);
@@ -13,7 +12,6 @@ TEST(MultiSetElementTest, CountManipulation) {
     elem.setIsSet(true);
     EXPECT_TRUE(elem.getIsSet());
 }
-//Сравнение элементов с одинаковым значением, но разными счетчиками
 TEST(MultiSetElementTest, ComparisonOperators) {
     MultiSetElement elem1("test", 1, false);
     MultiSetElement elem2("test", 2, false);
@@ -25,46 +23,33 @@ TEST(MultiSetElementTest, ComparisonOperators) {
     EXPECT_FALSE(elem1 == elem4);
     EXPECT_TRUE(elem1 == "test");
     EXPECT_FALSE(elem1 == "other");
-    EXPECT_FALSE(elem4 == "test"); // isSet = true, поэтому false
+    EXPECT_FALSE(elem4 == "test"); 
 }
 
 TEST(UndirectedMultiSetTest, Constructors) {
-    // Конструктор по умолчанию
     UndirectedMultiSet emptySet;
     EXPECT_TRUE(emptySet.isEmpty());
     EXPECT_EQ(0, emptySet.power());
     EXPECT_EQ(0, emptySet.uniqueCount());
     EXPECT_EQ(0, emptySet.totalCount());
-
-    // Конструктор из строки
     UndirectedMultiSet setFromString("1, 2, 3");
     EXPECT_FALSE(setFromString.isEmpty());
     EXPECT_EQ(3, setFromString.power());
     EXPECT_EQ(3, setFromString.uniqueCount());
-
-    // Конструктор копирования(создает идентичную копию)
     UndirectedMultiSet copy(setFromString);
     EXPECT_EQ(setFromString.power(), copy.power());
     EXPECT_EQ(setFromString.uniqueCount(), copy.uniqueCount());
-}
-
-
-// Удалеине 
+} 
 TEST(UndirectedMultiSetTest, RemoveOperations) {
     UndirectedMultiSet set("a, b, c, a, b");
-
-    // Удаление одного экземпляра
     set.remove("a", false, 1);
-    EXPECT_TRUE(set.contains("a")); // Должен остаться один А
-    // Удаление всех экземпляров
+    EXPECT_TRUE(set.contains("a")); 
     set.remove("a", false, 1);
     EXPECT_FALSE(set.contains("a"));
-    // Удаление несуществующего элемента
     testing::internal::CaptureStdout();
     set.remove("nonexistent");
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_NE(output.find("Элемент не найден"), std::string::npos);
-    // Удаление множества как элемента
     set.add("{set}", 1, true);
     set.remove("{set}", true, 1);
     EXPECT_FALSE(set.contains("{set}", true));
@@ -104,14 +89,12 @@ TEST(UndirectedMultiSetTest, CompoundAssignmentOperations) {
 TEST(UndirectedMultiSetTest, BooleanOperation) {
     UndirectedMultiSet set("1, 2");
     UndirectedMultiSet boolean = set.boolean();
-    //минимум для  Булеана( должен содержать как минимум пустое множество и само множество)
     EXPECT_TRUE(boolean.contains("{}", true));
     EXPECT_GE(boolean.power(), 2);
 }
 
 TEST(UndirectedMultiSetTest, ResizeFunctionality) {
     UndirectedMultiSet set;
-    // Добавляем много элементов для проверки resize
     for (int i = 0; i < 20; i++) {
         char element[10];
         sprintf(element, "elem%d", i);
@@ -123,8 +106,6 @@ TEST(UndirectedMultiSetTest, ResizeFunctionality) {
 
 TEST(SetManagerTest, BasicOperations) {
     SetManager manager;
-
-    // Добавление множеств
     UndirectedMultiSet set1("1, 2");
     UndirectedMultiSet set2("3, 4");
 
@@ -156,15 +137,11 @@ TEST(SetManagerTest, AutoNaming) {
     EXPECT_STREQ("Set2", manager.getSetName(1));
     EXPECT_STREQ("Set3", manager.getSetName(2));
 }
-
-//граничные случаи:
 TEST(SetManagerTest, BoundaryConditions) {
     SetManager manager;
     UndirectedMultiSet set("test");
-    // Пустое имя
     manager.addSet("", set);
     EXPECT_STREQ("", manager.getSetName(0));
-    // Неверные индексы
     EXPECT_EQ(nullptr, manager.getSetName(-1));
     EXPECT_EQ(nullptr, manager.getSetName(100));
 
@@ -191,16 +168,10 @@ TEST(SetManagerTest, ListAndSelectOperations) {
 
     manager.addSet("First", set1);
     manager.addSet("Second", set2);
-
-
-    // Проверяем что listSets не падает
     EXPECT_NO_THROW({
         manager.listSets();
         });
-
-    // selectSet требует ввода, тестируем только что не падает
     EXPECT_NO_THROW({
-        // Не можем протестировать интерактивную часть, но проверяем что метод существует
         });
 }
 
@@ -227,10 +198,9 @@ TEST(ErrorHandlingTest, SelfOperations) {
     UndirectedMultiSet result1 = set + set;
     UndirectedMultiSet result2 = set * set;
     UndirectedMultiSet result3 = set - set;
-
     EXPECT_TRUE(result1.contains("a"));
     EXPECT_TRUE(result2.contains("a"));
-    EXPECT_FALSE(result3.contains("a")); // Разность с самим собой дает пустое множество
+    EXPECT_FALSE(result3.contains("a")); 
 }
 
 
