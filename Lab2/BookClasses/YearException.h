@@ -1,7 +1,3 @@
-/**
- * @file YearException.h
- * @brief Исключение для работы с годами издания
- */
 
 #ifndef YEAR_EXCEPTION_H
 #define YEAR_EXCEPTION_H
@@ -14,5 +10,6 @@ class YearException : public runtime_error {
 public:
     YearException(const string& msg) : runtime_error(msg) {}
 };
+
 
 #endif
