@@ -1,8 +1,3 @@
-/**
- * @file AuthorBirthException.h
- * @brief Исключение для ошибок в дате рождения автора
- */
-
 #ifndef AUTHOR_BIRTH_EXCEPTION_H
 #define AUTHOR_BIRTH_EXCEPTION_H
 
@@ -14,5 +9,6 @@ class AuthorBirthException : public runtime_error {
 public:
     AuthorBirthException(const string& msg) : runtime_error(msg) {}
 };
+
 
 #endif
